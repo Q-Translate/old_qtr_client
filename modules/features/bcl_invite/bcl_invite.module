@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the bcl_invite feature.
- */
-
-include_once 'bcl_invite.features.inc';

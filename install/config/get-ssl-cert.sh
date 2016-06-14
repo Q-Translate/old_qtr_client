@@ -33,7 +33,7 @@ certbot certonly --webroot -w /var/www -d $domain -m $email --agree-tos $dry_run
 [[ $dry_run == '--dry-run' ]] && exit 0
 
 ### update config files
-sed -i /etc/apache2/sites-available/bcl-ssl.conf \
+sed -i /etc/apache2/sites-available/qcl-ssl.conf \
     -e "s#SSLCertificateFile .*#SSLCertificateFile      /etc/letsencrypt/live/$domain/cert.pem#" \
     -e "s#SSLCertificateKeyFile .*#SSLCertificateKeyFile   /etc/letsencrypt/live/$domain/privkey.pem#" \
     -e "s#SSLCertificateChainFile .*#SSLCertificateChainFile /etc/letsencrypt/live/$domain/chain.pem#"

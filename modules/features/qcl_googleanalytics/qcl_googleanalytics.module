@@ -1,0 +1,8 @@
+<?php
+/**
+ * @file
+ * Code for the qcl_googleanalytics feature.
+ */
+
+include_once 'qcl_googleanalytics.admin.inc';
+include_once 'qcl_googleanalytics.features.inc';

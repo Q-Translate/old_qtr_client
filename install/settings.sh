@@ -1,12 +1,12 @@
 
 ### Git branch that will be used.
-bcl_git_branch='master'
+qcl_git_branch='master'
 
 ### Domain of the website.
-bcl_domain='fr.example.org'
+qcl_domain='fr.example.org'
 
 ### Drupal 'admin' password.
-bcl_admin_passwd='admin'
+qcl_admin_passwd='admin'
 
 ### Emails from the server are sent through the SMTP
 ### of a GMAIL account. Give the full email
@@ -20,7 +20,7 @@ translation_lng='fr'
 ### Mysql passwords. Leave it as 'random'
 ### to generate a new one randomly
 mysql_passwd_root='random'
-mysql_passwd_bcl='random'
+mysql_passwd_qcl='random'
 
 ### Settings for OAuth2 Login.
 oauth2_server_url='http://dev.qtranslator.org'

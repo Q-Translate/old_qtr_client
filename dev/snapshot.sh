@@ -77,7 +77,7 @@ case $action in
 
         umount $drupal_dir/cache
         mv $drupal_dir $drupal_dir-del
-        mv $snapshot/bcl* $drupal_dir
+        mv $snapshot/qcl* $drupal_dir
         mount -a
 
         profile_dir=$drupal_dir/profiles/qtr_client

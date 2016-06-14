@@ -17,7 +17,7 @@ Development Tools, Tips and Tricks
 
   Then access the shell of a running container like this:
   #+BEGIN_EXAMPLE
-  docker-enter bcl
+  docker-enter qcl
   #+END_EXAMPLE
 
   See also this article:
@@ -34,17 +34,17 @@ Development Tools, Tips and Tricks
   save to a new image any configurations and data that we already have
   in this container.
   #+BEGIN_EXAMPLE
-  docker stop bcl
-  docker commit bcl qtr_client:1
+  docker stop qcl
+  docker commit qcl qtr_client:1
   docker images
-  docker rm bcl
-  docker run -d --name=bcl --hostname=example.org \
+  docker rm qcl
+  docker run -d --name=qcl --hostname=example.org \
 	     -p 80:80 -p 443:443 -p 2201:2201 qtr_client:1
   #+END_EXAMPLE
 
   Now we can enter the container and start the sshd server:
   #+BEGIN_EXAMPLE
-  docker-enter bcl
+  docker-enter qcl
   cd /usr/local/src/qtr_client/
   dev/install-sshd.sh 2201
   #+END_EXAMPLE
@@ -58,7 +58,7 @@ Development Tools, Tips and Tricks
 
   We can choose one of them like this:
   #+BEGIN_EXAMPLE
-  docker-enter bcl
+  docker-enter qcl
   cd /usr/local/src/qtr_client/
   dev/webserver.sh apache2
   dev/webserver.sh nginx
@@ -71,14 +71,14 @@ Development Tools, Tips and Tricks
 
   Inside the container you can make a clone for development like this:
   #+BEGIN_EXAMPLE
-  docker-enter bcl
+  docker-enter qcl
   cd /usr/local/src/qtr_client/
-  dev/clone.sh bcl bcl_dev1
-  dev/clone.sh bcl_dev1 bcl_test1
+  dev/clone.sh qcl qcl_dev1
+  dev/clone.sh qcl_dev1 qcl_test1
   #+END_EXAMPLE
 
-  It creates a new application with root */var/www/bcl_dev1/* and with
-  DB named *bcl_dev1*. It also creates the drush alias *@bcl_dev1*,
+  It creates a new application with root */var/www/qcl_dev1/* and with
+  DB named *qcl_dev1*. It also creates the drush alias *@qcl_dev1*,
   and modifies the configuration of the webserver so that the cloned
   application can be accessed at *dev1.example.org*.
 
@@ -88,10 +88,10 @@ Development Tools, Tips and Tricks
   Other clones like this can be created for testing etc. To cleanup
   (remove/erase) a clone, you can use *clone_rm.sh* like this:
   #+BEGIN_EXAMPLE
-  docker-enter bcl
+  docker-enter qcl
   cd /usr/local/src/qtr_client/
-  dev/clone_rm.sh bcl_dev1
-  dev/clone_rm.sh bcl_test1
+  dev/clone_rm.sh qcl_dev1
+  dev/clone_rm.sh qcl_test1
   #+END_EXAMPLE
 
   By the way, you can also modify a little bit the configuration of a
@@ -99,9 +99,9 @@ Development Tools, Tips and Tricks
   a development copy with a live or testing one), with the script
   =dev/config.php=:
   #+BEGIN_EXAMPLE
-  docker-enter bcl
+  docker-enter qcl
   cd /usr/local/src/qtr_client/
-  drush @bcl_dev php-script dev/config.php dev2
+  drush @qcl_dev php-script dev/config.php dev2
   #+END_EXAMPLE
 
   It will set site_name to 'Q-Translate (dev1)', will make site email
@@ -124,34 +124,34 @@ Development Tools, Tips and Tricks
   the code (the whole Drupal directory) and the database. It can be
   done like this:
   #+BEGIN_EXAMPLE
-  docker-enter bcl
+  docker-enter qcl
   cd /usr/local/src/qtr_client/
-  dev/snapshot.sh make @bcl
-  dev/snapshot.sh make @bcl_dev
+  dev/snapshot.sh make @qcl
+  dev/snapshot.sh make @qcl_dev
   #+END_EXAMPLE
-  These will create the files ~snapshot-bcl-20140914.tgz~ and
-  ~snapshot-bcl_dev-20140914.tgz~. They can be restored like this:
+  These will create the files ~snapshot-qcl-20140914.tgz~ and
+  ~snapshot-qcl_dev-20140914.tgz~. They can be restored like this:
   #+BEGIN_EXAMPLE
-  dev/snapshot.sh restore @bcl --file=snapshot-bcl-20140914.tgz
-  dev/snapshot.sh restore @bcl --file=snapshot-bcl_dev-20140914.tgz
-  dev/snapshot.sh restore @bcl_dev --file=snapshot-bcl-20140914.tgz
-  dev/snapshot.sh restore @bcl_dev --file=snapshot-bcl_dev-20140914.tgz
+  dev/snapshot.sh restore @qcl --file=snapshot-qcl-20140914.tgz
+  dev/snapshot.sh restore @qcl --file=snapshot-qcl_dev-20140914.tgz
+  dev/snapshot.sh restore @qcl_dev --file=snapshot-qcl-20140914.tgz
+  dev/snapshot.sh restore @qcl_dev --file=snapshot-qcl_dev-20140914.tgz
   #+END_EXAMPLE
-  As you may notice, a snapshot of *@bcl_dev* can also be restored on the
+  As you may notice, a snapshot of *@qcl_dev* can also be restored on the
   main application, and the other way around.
 
   However, in many cases a backup/restore of the database is all that
   is needed, and it is more efficient. It can be done with *drush
   sql-dump* and *drush sql-query* like this:
   #+BEGIN_EXAMPLE
-  drush sql-dump @bcl > bcl.sql
-  drush sql-dump @bcl_dev > bcl_dev.sql
+  drush sql-dump @qcl > qcl.sql
+  drush sql-dump @qcl_dev > qcl_dev.sql
 
-  drush @bcl sql-query --file=$(pwd)/bcl.sql
-  drush @bcl sql-query --file=$(pwd)/bcl_dev.sql
+  drush @qcl sql-query --file=$(pwd)/qcl.sql
+  drush @qcl sql-query --file=$(pwd)/qcl_dev.sql
 
-  drush @bcl_dev sql-query --file=$(pwd)/bcl.sql
-  drush @bcl_dev sql-query --file=$(pwd)/bcl_dev.sql
+  drush @qcl_dev sql-query --file=$(pwd)/qcl.sql
+  drush @qcl_dev sql-query --file=$(pwd)/qcl_dev.sql
   #+END_EXAMPLE
 
 
@@ -165,8 +165,8 @@ Development Tools, Tips and Tricks
   + First we make a backup of the directory inside the container that
     we want to share:
     #+BEGIN_EXAMPLE
-    docker-enter bcl
-    cd /var/www/bcl_dev/profiles/
+    docker-enter qcl
+    cd /var/www/qcl_dev/profiles/
     cp -a qtr_client/ qtr_client-bak
     exit
     #+END_EXAMPLE
@@ -174,34 +174,34 @@ Development Tools, Tips and Tricks
   + Then we save the image of the container as =qtr_client:dev=, in order
     to start a new container based on it:
     #+BEGIN_EXAMPLE
-    docker stop bcl
-    docker commit bcl qtr_client:dev
+    docker stop qcl
+    docker commit qcl qtr_client:dev
     docker images
     #+END_EXAMPLE
 
   + Next we create a new container that shares a directory with the
     host system (using the option =-v=):
     #+BEGIN_EXAMPLE
-    docker run -d --name=bcl_dev --hostname=dev.example.org \
-	       -v $(pwd)/bcl_dev:/var/www/bcl_dev/profiles/qtr_client/
+    docker run -d --name=qcl_dev --hostname=dev.example.org \
+	       -v $(pwd)/qcl_dev:/var/www/qcl_dev/profiles/qtr_client/
 	       -p 80:80 -p 443:443 qtr_client:dev
     #+END_EXAMPLE
-    *Note:* The container *bcl* must be stoped before we create and
-    start the new container *bcl_dev*, otherwise the ports 80 and 443
+    *Note:* The container *qcl* must be stoped before we create and
+    start the new container *qcl_dev*, otherwise the ports 80 and 443
     will conflict.
 
   + Finally we enter the container and move the content of the backup
     directory to the shared directory:
     #+BEGIN_EXAMPLE
-    docker-enter bcl_dev
-    cd /var/www/bcl_dev/profiles/qtr_client/
+    docker-enter qcl_dev
+    cd /var/www/qcl_dev/profiles/qtr_client/
     cp -a ../qtr_client-bak/* .
     cp -a ../qtr_client-bak/.* .
     rm -rf ../qtr_client-bak/
     exit
     #+END_EXAMPLE
 
-  Now we can go to the directory *bcl_dev/* and start /emacs/ or any
+  Now we can go to the directory *qcl_dev/* and start /emacs/ or any
   other tools. This way we don't have to install /emacs/ or any other
   development tools inside the container and we can use the best of
   development tools that the host system can offer.
@@ -209,8 +209,8 @@ Development Tools, Tips and Tricks
 
 * Pushing commits
 
-  The copy of the application on =/var/www/bcl_dev/profiles/qtr_client/=
-  (as well as the one on =/var/www/bcl/profiles/qtr_client/=) are actually
+  The copy of the application on =/var/www/qcl_dev/profiles/qtr_client/=
+  (as well as the one on =/var/www/qcl/profiles/qtr_client/=) are actually
   clones of the git repository of the project on GitHub, so we can
   *pull* from it and *push* to it. Pulling (to get up-to-date) can be
   done by everybody, however pushing requires a username and password
@@ -279,7 +279,7 @@ Development Tools, Tips and Tricks
   <?php
 
   $aliases['live'] = array (
-    'root' => '/var/www/bcl',
+    'root' => '/var/www/qcl',
     'uri' => 'http://example.org',
 
     'remote-host' => 'example.org',
@@ -303,7 +303,7 @@ Development Tools, Tips and Tricks
 
   $aliases['test'] = array (
     'parent' => '@live',
-    'root' => '/var/www/bcl',
+    'root' => '/var/www/qcl',
     'uri' => 'http://test.example.org',
     'remote-host' => 'test.example.org',
 
@@ -325,19 +325,19 @@ Development Tools, Tips and Tricks
   things, before applying them to the real live application. In my
   case it is placed on a different server, however it can also be
   placed on the same server as the live application (just make a clone
-  of the main application with =dev/clone.sh bcl bcl_test=).
+  of the main application with =dev/clone.sh qcl qcl_test=).
 
   When everything is set up correctly, the synchronization can be done
   as simply as this:
   #+BEGIN_EXAMPLE
   drush rsync @live @test
   drush sql-sync @live @test
-  drush rsync @live @bcl_dev
-  drush sql-sync @live @bcl_dev
+  drush rsync @live @qcl_dev
+  drush sql-sync @live @qcl_dev
   #+END_EXAMPLE
 
   *Note:* Synchronizing this way from *@test* to *@live* or from
-  *@bcl_dev* to *@live*, usually is a HUGE mistake, but the /simulate/
+  *@qcl_dev* to *@live*, usually is a HUGE mistake, but the /simulate/
   option on the config file will make sure that it fails.
 
   For drush commands to work remotely, *ssh* daemon has to be running

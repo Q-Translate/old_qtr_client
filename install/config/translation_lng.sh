@@ -15,12 +15,12 @@ then
 fi
 
 ### set drupal variable qtrClient_translation_lng
-drush @local_bcl --yes --exact vset qtrClient_translation_lng $translation_lng
+drush @local_qcl --yes --exact vset qtrClient_translation_lng $translation_lng
 
 ### add $translation_lng as a drupal language
 if [ "$translation_lng" != 'all' ]
 then
-    drush @local_bcl --yes language-add $translation_lng
-    drush @local_bcl --yes l10n-update-refresh
-    drush @local_bcl --yes l10n-update
+    drush @local_qcl --yes language-add $translation_lng
+    drush @local_qcl --yes l10n-update-refresh
+    drush @local_qcl --yes l10n-update
 fi

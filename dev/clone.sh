@@ -1,6 +1,6 @@
 #!/bin/bash
 ### Create a local clone of the main drupal
-### application (/var/www/bcl).
+### application (/var/www/qcl).
 
 if [ $# -ne 2 ]
 then
@@ -8,9 +8,9 @@ then
 
       Makes a clone from /var/www/<src> to /var/www/<dst>
       The database <src> will also be cloned to <dst>.
-      <dst> can be something like 'bcl_dev', 'bcl_test', 'bcl_01', etc.
+      <dst> can be something like 'qcl_dev', 'qcl_test', 'qcl_01', etc.
 
-      Note: Using something like 'bcl-dev' is not suitable
+      Note: Using something like 'qcl-dev' is not suitable
       for the name of the database.
 
       Caution: The root directory and the DB of the destination
@@ -28,9 +28,9 @@ rm -rf $dst_dir
 cp -a $src_dir $dst_dir
 
 ### modify settings.php
-bcl_domain=$(head -n 1 /etc/hosts.conf | cut -d' ' -f2)
+qcl_domain=$(head -n 1 /etc/hosts.conf | cut -d' ' -f2)
 sub=${dst#*_}
-hostname=$sub.$bcl_domain
+hostname=$sub.$qcl_domain
 sed -i $dst_dir/sites/default/settings.php \
     -e "/^\\\$databases = array/,+10  s/'database' => .*/'database' => '$dst',/" \
     -e "/^\\\$base_url/c \$base_url = \"https://$hostname\";" \
@@ -42,11 +42,11 @@ echo "127.0.0.1 $hostname" >> /etc/hosts.conf
 /etc/hosts_update.sh
 
 ### create a drush alias
-sed -i /etc/drush/local_bcl.aliases.drushrc.php \
+sed -i /etc/drush/local_qcl.aliases.drushrc.php \
     -e "/^\\\$aliases\['$dst'\] = /,+5 d"
-cat <<EOF >> /etc/drush/local_bcl.aliases.drushrc.php
+cat <<EOF >> /etc/drush/local_qcl.aliases.drushrc.php
 \$aliases['$dst'] = array (
-  'parent' => '@bcl',
+  'parent' => '@qcl',
   'root' => '$dst_dir',
   'uri' => 'http://$hostname',
 );
@@ -57,7 +57,7 @@ EOF
 mysql --defaults-file=/etc/mysql/debian.cnf -e "
     DROP DATABASE IF EXISTS $dst;
     CREATE DATABASE $dst;
-    GRANT ALL ON $dst.* TO bcl@localhost;
+    GRANT ALL ON $dst.* TO qcl@localhost;
 "
 
 ### copy the database

@@ -16,7 +16,7 @@ target=$1
 rm -rf /var/www/$target
 
 ### delete the drush alias
-sed -i /etc/drush/local_bcl.aliases.drushrc.php \
+sed -i /etc/drush/local_qcl.aliases.drushrc.php \
     -e "/^\\\$aliases\['$target'\] = /,+5 d"
 
 ### drop the database
@@ -30,9 +30,9 @@ rm -f /etc/nginx/sites-{available,enabled}/$target
 rm -f /etc/apache2/sites-{available,enabled}/$target{,-ssl}.conf
 
 ### remove from /etc/hosts
-bcl_domain=$(head -n 1 /etc/hosts.conf | cut -d' ' -f2)
+qcl_domain=$(head -n 1 /etc/hosts.conf | cut -d' ' -f2)
 sub=${target#*_}
-hostname=$sub.$bcl_domain
+hostname=$sub.$qcl_domain
 sed -i /etc/hosts.conf -e "/^127.0.0.1 $hostname/d"
 /etc/hosts_update.sh
 

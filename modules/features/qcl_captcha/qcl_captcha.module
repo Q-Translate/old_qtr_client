@@ -1,0 +1,8 @@
+<?php
+/**
+ * @file
+ * Code for the qcl_captcha feature.
+ */
+
+include_once 'qcl_captcha.admin.inc';
+include_once 'qcl_captcha.features.inc';

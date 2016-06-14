@@ -38,8 +38,8 @@
   First of all, we can get a list of all the so called /features
   components/:
   #+BEGIN_EXAMPLE
-  drush @bcl_dev help features-components
-  drush @bcl_dev features-components '%:%' > features-components.txt
+  drush @qcl_dev help features-components
+  drush @qcl_dev features-components '%:%' > features-components.txt
   #+END_EXAMPLE
   These are all the possible chunks of configuration that can be saved
   in a feature. All we have to do is to search and select the ones
@@ -81,16 +81,16 @@
   Now I can create a feature that includes these components with a
   command like this:
   #+BEGIN_EXAMPLE
-  drush @bcl_dev features-export \
+  drush @qcl_dev features-export \
   --destination=profiles/qtr_client/modules/features \
-  bcl_layout $(cat layout_components)
+  qcl_layout $(cat layout_components)
   #+END_EXAMPLE
   It creates a feature on the directory:
-  ~/var/www/bcl_dev/profiles/qtr_client/modules/features/bcl_layout/~
+  ~/var/www/qcl_dev/profiles/qtr_client/modules/features/qcl_layout/~
 
-  Other features that I have created are: /bcl_disqus/, /bcl_invite/,
-  /bcl_captcha/, /bcl_drupalchat/, /bcl_simplenews/,
-  /bcl_mass_contact/, /bcl_googleanalytics/, etc.  In order to
+  Other features that I have created are: /qcl_disqus/, /qcl_invite/,
+  /qcl_captcha/, /qcl_drupalchat/, /qcl_simplenews/,
+  /qcl_mass_contact/, /qcl_googleanalytics/, etc.  In order to
   recreate them easily, the script =create-features.sh= can be
   used. It will create a feature for each list of components that is
   on the directory ~components/~.
@@ -100,15 +100,15 @@
   #!/bin/bash
   ### Create all the features.
   ### However some features need manual customization
-  ### after being created (for example bcl_layout).
+  ### after being created (for example qcl_layout).
 
-  drush="drush --yes @bcl_dev"
+  drush="drush --yes @qcl_dev"
   destination="profiles/qtr_client/modules/features"
 
   function create_feature
   {
       components=$1
-      feature_name="bcl_$(basename $components)"
+      feature_name="qcl_$(basename $components)"
 
 
       xargs --delimiter=$'\n' --arg-file=$components \
@@ -138,7 +138,7 @@
   can further customize it manually if needed. And sometimes there is
   the need for manual customization because the automatic generation
   cannot get always everything right. In the case of the layout
-  feature I added the file ~bcl_layout.install~, which uses
+  feature I added the file ~qcl_layout.install~, which uses
   *hook_enable()* to make further customizations after the feature is
   installed.
   #+BEGIN_EXAMPLE
@@ -147,14 +147,14 @@
   /**
    * Implements hook_enable().
    */
-  function bcl_layout_enable() {
-    _bcl_layout_create_aliases();
-    _bcl_layout_add_login_link();
-    _bcl_layout_block_settings();
+  function qcl_layout_enable() {
+    _qcl_layout_create_aliases();
+    _qcl_layout_add_login_link();
+    _qcl_layout_block_settings();
   }
 
 
-  function _bcl_layout_create_aliases() {
+  function _qcl_layout_create_aliases() {
     $aliases = array(
       'udhezuesi' => 'Udhëzuesi i Përkthyesit',
       'about' => 'About',
@@ -171,7 +171,7 @@
     }
   }
 
-  function _bcl_layout_add_login_link() {
+  function _qcl_layout_add_login_link() {
     $query = "DELETE FROM {menu_links}
 	      WHERE menu_name='user-menu'
 		AND link_path='user/login'
@@ -188,7 +188,7 @@
     menu_link_save($login);
   }
 
-  function _bcl_layout_block_settings() {
+  function _qcl_layout_block_settings() {
     // set the title of the menu block as Navigation
     db_query("UPDATE {block} SET title='Navigation'
 	      WHERE theme='qtr_client' AND delta='navig-menu'");
@@ -234,12 +234,12 @@
   the fact that they are just Drupal modules, and anything that works
   for Drupal modules works for them too.
 
-  For example, for the feature /bcl_googleanalytics/, I have
-  added this line on ~bcl_googleanalytics.module~:
+  For example, for the feature /qcl_googleanalytics/, I have
+  added this line on ~qcl_googleanalytics.module~:
   #+BEGIN_EXAMPLE
-  include_once 'bcl_googleanalytics.admin.inc';
+  include_once 'qcl_googleanalytics.admin.inc';
   #+END_EXAMPLE
-  I have also created the file ~bcl_googleanalytics.admin.inc~
+  I have also created the file ~qcl_googleanalytics.admin.inc~
   with a content like this:
   #+BEGIN_EXAMPLE
   <?php
@@ -251,13 +251,13 @@
   /**
    * Implements hook_menu().
    */
-  function bcl_googleanalytics_menu() {
+  function qcl_googleanalytics_menu() {
     $items = array();
     $items['admin/config/qtr/googleanalytics'] = array(
       'title'            => 'GoogleAnalytics',
       'description'      => 'Private GoogleAnalytics settings.',
       'page callback'    => 'drupal_get_form',
-      'page arguments'   => array('bcl_googleanalytics_config'),
+      'page arguments'   => array('qcl_googleanalytics_config'),
       'access callback'  => TRUE,
     );
 
@@ -270,7 +270,7 @@
    * @return
    *   An array containing form items to place on the module settings page.
    */
-  function bcl_googleanalytics_config() {
+  function qcl_googleanalytics_config() {
     $form = array();
 
     $form['googleanalytics_account'] = array(
@@ -319,8 +319,8 @@
   which keeps the values of these variables and can restore them.  It
   works like this:
   #+BEGIN_EXAMPLE
-  features/save-private-vars.sh @bcl_dev
-  drush @bcl_dev php-script restore-private-vars.php
+  features/save-private-vars.sh @qcl_dev
+  drush @qcl_dev php-script restore-private-vars.php
   #+END_EXAMPLE
 
   The file ~private-vars.txt~ looks like this:

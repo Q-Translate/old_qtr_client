@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the qcl_simplenews feature.
+ */
+
+include_once 'qcl_simplenews.features.inc';

@@ -103,12 +103,12 @@ dependencies[] = mimemail_compress
 ;--------------------
 
 dependencies[] = qtrClient
-dependencies[] = bcl_disqus
+dependencies[] = qcl_disqus
 
 ;;; Features
-;dependencies[] = bcl_qtrClient
-;dependencies[] = bcl_misc
-;dependencies[] = bcl_layout
-;dependencies[] = bcl_content
-;dependencies[] = bcl_captcha
-;dependencies[] = bcl_permissions
+;dependencies[] = qcl_qtrClient
+;dependencies[] = qcl_misc
+;dependencies[] = qcl_layout
+;dependencies[] = qcl_content
+;dependencies[] = qcl_captcha
+;dependencies[] = qcl_permissions

@@ -34,7 +34,7 @@ then
 fi
 
 ### set drupal variables and configs
-alias=${1:-@bcl}
+alias=${1:-@qcl}
 skip_ssl=1
 drush --yes $alias php-script $(dirname $0)/oauth2_login.php  \
     "$oauth2_server_url" "$oauth2_client_id" "$oauth2_client_secret" "$skip_ssl"

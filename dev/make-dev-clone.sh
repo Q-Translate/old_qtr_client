@@ -1,8 +1,8 @@
 #!/bin/bash -x
 
-### make a clone of /var/www/bcl to /var/www/bcl_dev
-/usr/local/src/qtr_client/dev/clone.sh bcl bcl_dev
+### make a clone of /var/www/qcl to /var/www/qcl_dev
+/usr/local/src/qtr_client/dev/clone.sh qcl qcl_dev
 
 ### add a test user
-drush @bcl_dev user-create user1 --password=pass1 \
+drush @qcl_dev user-create user1 --password=pass1 \
       --mail='user1@example.org' > /dev/null 2>&1

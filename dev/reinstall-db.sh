@@ -1,6 +1,6 @@
 #!/bin/bash -x
 ### Reinstall the Drupal profile 'qtr_client' and its features.
-### This script touches only the database of Drupal (bcl)
+### This script touches only the database of Drupal (qcl)
 ### and nothing else. Useful for testing the features.
 ###
 ### Usually, when features are un-installed, things are not undone
@@ -58,30 +58,30 @@ drush --yes pm-enable qtrProject
 drush --yes pm-enable qtrVocabulary
 
 ## install features modules
-drush --yes pm-enable bcl_qtrClient
-drush --yes features-revert bcl_qtrClient
+drush --yes pm-enable qcl_qtrClient
+drush --yes features-revert qcl_qtrClient
 
-drush --yes pm-enable bcl_misc
-drush --yes features-revert bcl_misc
+drush --yes pm-enable qcl_misc
+drush --yes features-revert qcl_misc
 
-drush --yes pm-enable bcl_layout
-drush --yes features-revert bcl_layout
+drush --yes pm-enable qcl_layout
+drush --yes features-revert qcl_layout
 
-drush --yes pm-enable bcl_content
+drush --yes pm-enable qcl_content
 
-#drush --yes pm-enable bcl_captcha
-#drush --yes features-revert bcl_captcha
+#drush --yes pm-enable qcl_captcha
+#drush --yes features-revert qcl_captcha
 
-drush --yes pm-enable bcl_permissions
-drush --yes features-revert bcl_permissions
+drush --yes pm-enable qcl_permissions
+drush --yes features-revert qcl_permissions
 
-drush --yes pm-enable bcl_disqus
-#drush --yes pm-enable bcl_invite
-#drush --yes pm-enable bcl_simplenews
-#drush --yes pm-enable bcl_mass_contact
-#drush --yes pm-enable bcl_googleanalytics
-#drush --yes pm-enable bcl_drupalchat
-#drush --yes pm-enable bcl_fb
+drush --yes pm-enable qcl_disqus
+#drush --yes pm-enable qcl_invite
+#drush --yes pm-enable qcl_simplenews
+#drush --yes pm-enable qcl_mass_contact
+#drush --yes pm-enable qcl_googleanalytics
+#drush --yes pm-enable qcl_drupalchat
+#drush --yes pm-enable qcl_fb
 
 ### configure oauth2 login
 export oauth2_server_url='http://dev.qtranslator.org'

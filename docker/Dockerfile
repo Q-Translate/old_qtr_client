@@ -11,4 +11,4 @@ WORKDIR /usr/local/src/qtr_client/
 RUN ["install/install.sh"]
 
 ### Set the default dir to the code of the application.
-WORKDIR /var/www/bcl/profiles/qtr_client
+WORKDIR /var/www/qcl/profiles/qtr_client

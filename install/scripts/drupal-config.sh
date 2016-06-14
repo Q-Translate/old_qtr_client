@@ -71,35 +71,35 @@ comment memcache config */
 EOF
 
 ### install qtrProject and qtrVocabulary
-### $drush is an alias for 'drush --root=/var/www/bcl'
+### $drush is an alias for 'drush --root=/var/www/qcl'
 $drush --yes pm-enable qtrProject
 $drush --yes pm-enable qtrVocabulary
 
 ### install additional features
-$drush --yes pm-enable bcl_qtrClient
-$drush --yes features-revert bcl_qtrClient
+$drush --yes pm-enable qcl_qtrClient
+$drush --yes features-revert qcl_qtrClient
 
-$drush --yes pm-enable bcl_misc
-$drush --yes features-revert bcl_misc
+$drush --yes pm-enable qcl_misc
+$drush --yes features-revert qcl_misc
 
-$drush --yes pm-enable bcl_layout
-$drush --yes features-revert bcl_layout
+$drush --yes pm-enable qcl_layout
+$drush --yes features-revert qcl_layout
 
-$drush --yes pm-enable bcl_content
+$drush --yes pm-enable qcl_content
 
-#$drush --yes pm-enable bcl_captcha
-#$drush --yes features-revert bcl_captcha
+#$drush --yes pm-enable qcl_captcha
+#$drush --yes features-revert qcl_captcha
 
-$drush --yes pm-enable bcl_permissions
-$drush --yes features-revert bcl_permissions
+$drush --yes pm-enable qcl_permissions
+$drush --yes features-revert qcl_permissions
 
-#$drush --yes pm-enable bcl_discus
-#$drush --yes features-revert bcl_discus
-#$drush --yes pm-enable bcl_invite
-#$drush --yes pm-enable bcl_simplenews
-#$drush --yes pm-enable bcl_mass_contact
-#$drush --yes pm-enable bcl_googleanalytics
-#$drush --yes pm-enable bcl_drupalchat
+#$drush --yes pm-enable qcl_discus
+#$drush --yes features-revert qcl_discus
+#$drush --yes pm-enable qcl_invite
+#$drush --yes pm-enable qcl_simplenews
+#$drush --yes pm-enable qcl_mass_contact
+#$drush --yes pm-enable qcl_googleanalytics
+#$drush --yes pm-enable qcl_drupalchat
 
 ### update to the latest version of core and modules
 #$drush --yes pm-refresh

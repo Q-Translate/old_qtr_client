@@ -9,45 +9,45 @@ for the qtr_client.
 It will modify the files:
  1) /etc/hostname
  2) /etc/hosts
- 3) /etc/nginx/sites-available/bcl*
- 4) /etc/apache2/sites-available/bcl*
- 5) /var/www/bcl*/sites/default/settings.php
+ 3) /etc/nginx/sites-available/qcl*
+ 4) /etc/apache2/sites-available/qcl*
+ 5) /var/www/qcl*/sites/default/settings.php
 "
 
 ### get the old domain
-old_bcl_domain=$(head -n 1 /etc/hosts.conf | cut -d' ' -f2)
-old_bcl_domain=${old_bcl_domain:-example.org}
+old_qcl_domain=$(head -n 1 /etc/hosts.conf | cut -d' ' -f2)
+old_qcl_domain=${old_qcl_domain:-example.org}
 
 ### get the new domain
-if [ -z "${bcl_domain+xxx}" -o "$bcl_domain" = '' ]
+if [ -z "${qcl_domain+xxx}" -o "$qcl_domain" = '' ]
 then
-    read -p "Enter the domain name for qtr_client [$old_bcl_domain]: " input
-    bcl_domain=${input:-$old_bcl_domain}
+    read -p "Enter the domain name for qtr_client [$old_qcl_domain]: " input
+    qcl_domain=${input:-$old_qcl_domain}
 fi
 
 ### update /etc/hostname and /etc/hosts
-echo $bcl_domain > /etc/hostname
+echo $qcl_domain > /etc/hostname
 sed -i /etc/hosts.conf \
-    -e "/127.0.0.1 $old_bcl_domain/c 127.0.0.1 $bcl_domain/" \
-    -e "/127.0.0.1 dev.$old_bcl_domain/c 127.0.0.1 dev.$bcl_domain/"
+    -e "/127.0.0.1 $old_qcl_domain/c 127.0.0.1 $qcl_domain/" \
+    -e "/127.0.0.1 dev.$old_qcl_domain/c 127.0.0.1 dev.$qcl_domain/"
 /etc/hosts_update.sh
 
 ### update config files
-for file in $(ls /etc/nginx/sites-available/bcl*)
+for file in $(ls /etc/nginx/sites-available/qcl*)
 do
-    sed -i $file -e "/server_name/ s/$old_bcl_domain/$bcl_domain/"
+    sed -i $file -e "/server_name/ s/$old_qcl_domain/$qcl_domain/"
 done
-for file in $(ls /etc/apache2/sites-available/bcl*)
+for file in $(ls /etc/apache2/sites-available/qcl*)
 do
     sed -i $file \
-        -e "/ServerName/ s/$old_bcl_domain/$bcl_domain/" \
-        -e "/RedirectPermanent/ s/$old_bcl_domain/$bcl_domain/"
+        -e "/ServerName/ s/$old_qcl_domain/$qcl_domain/" \
+        -e "/RedirectPermanent/ s/$old_qcl_domain/$qcl_domain/"
 done
-for file in $(ls /var/www/bcl*/sites/default/settings.php)
+for file in $(ls /var/www/qcl*/sites/default/settings.php)
 do
-    sed -i $file -e "/^\\\$base_url/ s/$old_bcl_domain/$bcl_domain/"
+    sed -i $file -e "/^\\\$base_url/ s/$old_qcl_domain/$qcl_domain/"
 done
 
 ### update uri on drush aliases
-sed -i /etc/drush/local_bcl.aliases.drushrc.php \
-    -e "/'uri'/ s/$old_bcl_domain/$bcl_domain/"
+sed -i /etc/drush/local_qcl.aliases.drushrc.php \
+    -e "/'uri'/ s/$old_qcl_domain/$qcl_domain/"

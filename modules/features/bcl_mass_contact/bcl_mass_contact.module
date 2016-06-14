@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the bcl_mass_contact feature.
- */
-
-include_once 'bcl_mass_contact.features.inc';

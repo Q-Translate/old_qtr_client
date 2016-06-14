@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the bcl_simplenews feature.
- */
-
-include_once 'bcl_simplenews.features.inc';

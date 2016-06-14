@@ -102,7 +102,7 @@ msgstr ""
 
 #, fuzzy
 #~| msgid "Contact"
-#~ msgid "bcl_content"
+#~ msgid "qcl_content"
 #~ msgstr "Lidhu"
 
 #, fuzzy

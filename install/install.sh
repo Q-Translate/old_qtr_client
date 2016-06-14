@@ -11,7 +11,7 @@ cd $code_dir/install/scripts/
 
 ### make and install the drupal profile
 export DEBIAN_FRONTEND=noninteractive
-export drupal_dir=/var/www/bcl
+export drupal_dir=/var/www/qcl
 export drush="drush --root=$drupal_dir"
 ./drupal-make-and-install.sh
 

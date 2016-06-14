@@ -3,7 +3,7 @@
 ### make sure that we have the right git branch on the make file
 makefile="$code_dir/build-qtrclient.make"
 sed -i $makefile \
-    -e "/qtr_client..download..branch/ c projects[qtr_client][download][branch] = $bcl_git_branch"
+    -e "/qtr_client..download..branch/ c projects[qtr_client][download][branch] = $qcl_git_branch"
 
 ### retrieve all the projects/modules and build the application directory
 rm -rf $drupal_dir
@@ -57,13 +57,13 @@ then
 fi
 
 ### settings for the database and the drupal site
-db_name=bcl
-db_user=bcl
-db_pass=bcl
+db_name=qcl
+db_user=qcl
+db_pass=qcl
 site_name="Q-Translate"
 site_mail="$gmail_account"
 account_name=admin
-account_pass="$bcl_admin_passwd"
+account_pass="$qcl_admin_passwd"
 account_mail="$gmail_account"
 
 ### create the database and user

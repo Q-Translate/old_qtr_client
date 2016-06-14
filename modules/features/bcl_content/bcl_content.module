@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the bcl_content feature.
- */
-
-include_once 'bcl_content.features.inc';

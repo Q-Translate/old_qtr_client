@@ -44,13 +44,13 @@ else
     ### copy the directory qtr_client/ from the image to the host
     docker create --name=$container $image
     docker start $container
-    docker cp $container:/var/www/bcl/profiles/qtr_client $(pwd)/
+    docker cp $container:/var/www/qcl/profiles/qtr_client $(pwd)/
     docker stop $container
     docker rm $container
 
     ### create a container for development
     docker create --name=$container --hostname=$hostname --restart=always \
-        -v $(pwd)/qtr_client:/var/www/bcl/profiles/qtr_client \
+        -v $(pwd)/qtr_client:/var/www/qcl/profiles/qtr_client \
         --link $qtr_container:$qtr_domain \
         $ports $image
 fi

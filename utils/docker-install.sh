@@ -56,22 +56,22 @@ else
 fi
 
 ### create a link on workdir
-mkdir -p $workdir/bcl
-cd $workdir/bcl/
+mkdir -p $workdir/qcl
+cd $workdir/qcl/
 ln -sf $srcdir/qtr_client/docker .
 
 ### build the image
 cd $workdir/
-bcl/docker/build.sh --dont-fork $@
+qcl/docker/build.sh --dont-fork $@
 
 ### create and start the container
-sed -i bcl/config -e '/^ports=/ c ports='
-bcl/docker/rm.sh 2>/dev/null
-bcl/docker/create.sh
-bcl/docker/start.sh
+sed -i qcl/config -e '/^ports=/ c ports='
+qcl/docker/rm.sh 2>/dev/null
+qcl/docker/create.sh
+qcl/docker/start.sh
 
 ### set up the domain
-source bcl/config
+source qcl/config
 if test -n "$domains"
 then
     wsproxy/domains-rm.sh $domains

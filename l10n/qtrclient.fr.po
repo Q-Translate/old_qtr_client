@@ -6,26 +6,26 @@
 # Generated from files:
 #  qtr_client.info: n/a
 #  install/config/gmailsmtp.php: n/a
-#  modules/features/bcl_qtrClient/bcl_qtrClient.info: n/a
-#  modules/features/bcl_captcha/bcl_captcha.info: n/a
-#  modules/features/bcl_content/bcl_content.info: n/a
-#  modules/features/bcl_drupalchat/bcl_drupalchat.info: n/a
-#  modules/features/bcl_fb/bcl_fb.info: n/a
-#  modules/features/bcl_googleanalytics/bcl_googleanalytics.info: n/a
-#  modules/features/bcl_invite/bcl_invite.info: n/a
-#  modules/features/bcl_layout/bcl_layout.info: n/a
-#  modules/features/bcl_mass_contact/bcl_mass_contact.info: n/a
-#  modules/features/bcl_misc/bcl_misc.info: n/a
-#  modules/features/bcl_permissions/bcl_permissions.info: n/a
-#  modules/features/bcl_simplenews/bcl_simplenews.info: n/a
-#  modules/features/bcl_captcha/bcl_captcha.admin.inc: n/a
-#  modules/features/bcl_content/bcl_content.features.field.inc: n/a
-#  modules/features/bcl_content/bcl_content.features.inc: n/a
-#  modules/features/bcl_googleanalytics/bcl_googleanalytics.admin.inc: n/a
-#  modules/features/bcl_layout/bcl_layout.context.inc: n/a
-#  modules/features/bcl_layout/bcl_layout.features.menu_custom.inc: n/a
-#  modules/features/bcl_layout/bcl_layout.features.menu_links.inc: n/a
-#  modules/features/bcl_layout/bcl_layout.views_default.inc: n/a
+#  modules/features/qcl_qtrClient/qcl_qtrClient.info: n/a
+#  modules/features/qcl_captcha/qcl_captcha.info: n/a
+#  modules/features/qcl_content/qcl_content.info: n/a
+#  modules/features/qcl_drupalchat/qcl_drupalchat.info: n/a
+#  modules/features/qcl_fb/qcl_fb.info: n/a
+#  modules/features/qcl_googleanalytics/qcl_googleanalytics.info: n/a
+#  modules/features/qcl_invite/qcl_invite.info: n/a
+#  modules/features/qcl_layout/qcl_layout.info: n/a
+#  modules/features/qcl_mass_contact/qcl_mass_contact.info: n/a
+#  modules/features/qcl_misc/qcl_misc.info: n/a
+#  modules/features/qcl_permissions/qcl_permissions.info: n/a
+#  modules/features/qcl_simplenews/qcl_simplenews.info: n/a
+#  modules/features/qcl_captcha/qcl_captcha.admin.inc: n/a
+#  modules/features/qcl_content/qcl_content.features.field.inc: n/a
+#  modules/features/qcl_content/qcl_content.features.inc: n/a
+#  modules/features/qcl_googleanalytics/qcl_googleanalytics.admin.inc: n/a
+#  modules/features/qcl_layout/qcl_layout.context.inc: n/a
+#  modules/features/qcl_layout/qcl_layout.features.menu_custom.inc: n/a
+#  modules/features/qcl_layout/qcl_layout.features.menu_links.inc: n/a
+#  modules/features/qcl_layout/qcl_layout.views_default.inc: n/a
 #  themes/bootstrap1/bootstrap1.info: n/a
 #
 # #-#-#-#-#  installer.pot (PROJECT VERSION)  #-#-#-#-#

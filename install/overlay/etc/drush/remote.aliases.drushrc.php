@@ -3,7 +3,7 @@
 /* uncomment and modify properly
 
 $aliases['live'] = array (
-  'root' => '/var/www/bcl',
+  'root' => '/var/www/qcl',
   'uri' => 'http://example.org',
 
   'remote-host' => 'example.org',
@@ -28,7 +28,7 @@ $aliases['live'] = array (
 
 $aliases['test'] = array (
   'parent' => '@live',
-  'root' => '/var/www/bcl_test',
+  'root' => '/var/www/qcl_test',
   'uri' => 'http://test.example.org',
 
   'command-specific' => array (

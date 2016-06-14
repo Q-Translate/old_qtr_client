@@ -9,23 +9,23 @@ then
     set +a
 fi
 
-bcl=/usr/local/src/qtr_client/install
+qcl=/usr/local/src/qtr_client/install
 
-test -d /var/www/bcl_dev && $bcl/../dev/clone_rm.sh bcl_dev
+test -d /var/www/qcl_dev && $qcl/../dev/clone_rm.sh qcl_dev
 
-$bcl/config/domain.sh
-$bcl/config/mysql_passwords.sh
-$bcl/config/mysql_qtrclient.sh
-$bcl/config/gmailsmtp.sh
-$bcl/config/drupalpass.sh
-$bcl/config/oauth2_login.sh
-$bcl/config/translation_lng.sh
-$bcl/config/ssh_keys.sh
+$qcl/config/domain.sh
+$qcl/config/mysql_passwords.sh
+$qcl/config/mysql_qtrclient.sh
+$qcl/config/gmailsmtp.sh
+$qcl/config/drupalpass.sh
+$qcl/config/oauth2_login.sh
+$qcl/config/translation_lng.sh
+$qcl/config/ssh_keys.sh
 
 if [ "$development" = 'true' ]
 then
-    $bcl/../dev/make-dev-clone.sh
+    $qcl/../dev/make-dev-clone.sh
 fi
 
 ### drush may create some css/js files with wrong permissions
-$bcl/config/fix_file_permissions.sh
+$qcl/config/fix_file_permissions.sh
