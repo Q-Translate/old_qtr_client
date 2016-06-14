@@ -14,7 +14,7 @@ of the registered client.
 
 if [ -z "${oauth2_server_url+xxx}" -o "$oauth2_server_url" = '' ]
 then
-    oauth2_server_url='http://dev.qtranslator.org'
+    oauth2_server_url='http://dev.qtranslate.org'
     read -p "Enter the URL of the Q-Translate Server [$oauth2_server_url]: " input
     oauth2_server_url=${input:-$oauth2_server_url}
 fi

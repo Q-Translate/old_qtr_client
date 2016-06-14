@@ -3,16 +3,16 @@
 # LANGUAGE translation of Drupal (installer)
 # Copyright 2012 NAME <EMAIL@ADDRESS>
 # Generated from files:
-#  qtranslator.install: n/a
-#  qtranslator.profile: n/a
+#  qtranslate.install: n/a
+#  qtranslate.profile: n/a
 # #-#-#-#-#  general.pot (PROJECT VERSION)  #-#-#-#-#
 # $Id$
 # LANGUAGE translation of Drupal (general)
 # Copyright 2012 NAME <EMAIL@ADDRESS>
 # Generated from files:
-#  qtranslator.info: n/a
-#  qtranslator.install: n/a
-#  qtranslator.profile: n/a
+#  qtranslate.info: n/a
+#  qtranslate.install: n/a
+#  qtranslate.profile: n/a
 msgid ""
 msgstr ""
 "Project-Id-Version: 7.x-dev\n"

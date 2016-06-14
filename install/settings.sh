@@ -23,7 +23,7 @@ mysql_passwd_root='random'
 mysql_passwd_qcl='random'
 
 ### Settings for OAuth2 Login.
-oauth2_server_url='http://dev.qtranslator.org'
+oauth2_server_url='http://dev.qtranslate.org'
 oauth2_client_id='client1'
 oauth2_client_secret='0123456789'
 

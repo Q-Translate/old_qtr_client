@@ -84,7 +84,7 @@ drush --yes pm-enable qcl_disqus
 #drush --yes pm-enable qcl_fb
 
 ### configure oauth2 login
-export oauth2_server_url='http://dev.qtranslator.org'
+export oauth2_server_url='http://dev.qtranslate.org'
 export oauth2_client_id='client1'
 export oauth2_client_secret='0123456789'
 config=$drupal_dir/profiles/qtr_client/install/config
