@@ -30,7 +30,7 @@ libraries[lessphp][download][url] = https://github.com/oyejorge/less.php/archive
 ;projects[qtrclient] = 2.x-dev
 projects[qtrclient][type] = module
 projects[qtrclient][download][type] = git
-projects[qtrclient][download][url] = https://github.com/B-Translator/qtrclient.git
+projects[qtrclient][download][url] = https://github.com/Q-Translate/qtrclient.git
 projects[qtrclient][download][branch] = 7.x-2.x
 
 ;--------------------

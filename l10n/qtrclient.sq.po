@@ -28,15 +28,15 @@ msgstr ""
 
 #: qtr_client.info:0
 #, fuzzy
-#| msgid "B-Translator Settings"
-msgid "B-Translator Client"
-msgstr "Rregullimet në B-Translator"
+#| msgid "Q-Translate Settings"
+msgid "Q-Translate Client"
+msgstr "Rregullimet në Q-Translate"
 
 #: qtr_client.info:0
 #, fuzzy
-#| msgid "Drupal installation profile for B-Translator."
-msgid "Drupal installation profile for B-Translator Client."
-msgstr "Profil instalimi Drupal për B-Translator"
+#| msgid "Drupal installation profile for Q-Translate."
+msgid "Drupal installation profile for Q-Translate Client."
+msgstr "Profil instalimi Drupal për Q-Translate"
 
 #: install/config/gmailsmtp.php:46
 msgid "Send e-mail to admin when a new user is registered"
@@ -93,8 +93,8 @@ msgid "Mail Settings"
 msgstr ""
 
 #: qtr_client.profile:36
-msgid "B-Translator Settings"
-msgstr "Rregullimet në B-Translator"
+msgid "Q-Translate Settings"
+msgstr "Rregullimet në Q-Translate"
 
 #: qtr_client.profile:42
 msgid "OAuth2 Login Settings"
@@ -121,8 +121,8 @@ msgstr ""
 #~ msgid "‹ previous"
 #~ msgstr "Paraardhëse"
 
-#~ msgid "B-Translator configuration options"
-#~ msgstr "Mundësitë e trajtësimit të B-Translator"
+#~ msgid "Q-Translate configuration options"
+#~ msgstr "Mundësitë e trajtësimit të Q-Translate"
 
 #~ msgid "Translation Language"
 #~ msgstr "Gjuha e Përkthimit"
@@ -154,8 +154,8 @@ msgstr ""
 #~ msgid "Select Voting Mode"
 #~ msgstr "Zgjidh Mënyrën e Votimit"
 
-#~ msgid "B-Translator default settings"
-#~ msgstr "Rregullimet normale të B-Translator"
+#~ msgid "Q-Translate default settings"
+#~ msgstr "Rregullimet normale të Q-Translate"
 
 #~ msgid ""
 #~ "Select the projects that will be used for review and translations. Only "
@@ -187,26 +187,26 @@ msgstr ""
 #~ msgstr "Lista e Projekteve që do Përdoren për Votimet dhe Përkthimet"
 
 #, fuzzy
-#~| msgid "B-Translator default settings"
-#~ msgid "B-Translator Client Default Settings"
-#~ msgstr "Rregullimet normale të B-Translator"
+#~| msgid "Q-Translate default settings"
+#~ msgid "Q-Translate Client Default Settings"
+#~ msgstr "Rregullimet normale të Q-Translate"
 
 #, fuzzy
 #~| msgid "Translation Language"
 #~ msgid "Default Translation Language"
 #~ msgstr "Gjuha e Përkthimit"
 
-#~ msgid "B-Translator: Top contributors during the last period"
-#~ msgstr "B-Translator: Ndihmuesit më të mirë këto kohët e fundit"
+#~ msgid "Q-Translate: Top contributors during the last period"
+#~ msgstr "Q-Translate: Ndihmuesit më të mirë këto kohët e fundit"
 
 #~ msgid ""
-#~ "B-Translator: Contribution statistics (for the last week, month and year)"
+#~ "Q-Translate: Contribution statistics (for the last week, month and year)"
 #~ msgstr ""
-#~ "B-Translator: Statistikat e kontributeve (për javën, muajin dhe vitin e "
+#~ "Q-Translate: Statistikat e kontributeve (për javën, muajin dhe vitin e "
 #~ "fundit)"
 
-#~ msgid "B-Translator: Latest contributions"
-#~ msgstr "B-Translator: Ndihmesat e fundit"
+#~ msgid "Q-Translate: Latest contributions"
+#~ msgstr "Q-Translate: Ndihmesat e fundit"
 
 #~ msgid "Size of the list"
 #~ msgstr "Madhësia e listës"
@@ -269,9 +269,9 @@ msgstr ""
 #~ msgstr "Përshkrimi i Projektit"
 
 #, fuzzy
-#~| msgid "B-Translator Settings"
-#~ msgid "B-Translator UI"
-#~ msgstr "Rregullimet në B-Translator"
+#~| msgid "Q-Translate Settings"
+#~ msgid "Q-Translate UI"
+#~ msgstr "Rregullimet në Q-Translate"
 
 #~ msgid "Hide string details."
 #~ msgstr "Fshih hollësitë e vargut."
@@ -582,14 +582,14 @@ msgstr ""
 #~ msgstr "në rrethana: @context"
 
 #, fuzzy
-#~| msgid "B-Translator export configuration"
-#~ msgid "B-Translator Configuration"
-#~ msgstr "Formësimi i eksporteve në B-Translator"
+#~| msgid "Q-Translate export configuration"
+#~ msgid "Q-Translate Configuration"
+#~ msgstr "Formësimi i eksporteve në Q-Translate"
 
 #, fuzzy
-#~| msgid "B-Translator default settings"
-#~ msgid "B-Translator Defaults"
-#~ msgstr "Rregullimet normale të B-Translator"
+#~| msgid "Q-Translate default settings"
+#~ msgid "Q-Translate Defaults"
+#~ msgstr "Rregullimet normale të Q-Translate"
 
 #, fuzzy
 #~| msgid ""
@@ -602,9 +602,9 @@ msgstr ""
 #~ "zgjedhur."
 
 #, fuzzy
-#~| msgid "B-Translator Settings"
-#~ msgid "B-Translator Export"
-#~ msgstr "Rregullimet në B-Translator"
+#~| msgid "Q-Translate Settings"
+#~ msgid "Q-Translate Export"
+#~ msgstr "Rregullimet në Q-Translate"
 
 #~ msgid "Export path"
 #~ msgstr "Vendi i eksportimeve"
@@ -641,26 +641,26 @@ msgstr ""
 #~ msgid "Import translation (PO) files."
 #~ msgstr "Importo skedarët e përkthimit (skedarët PO)."
 
-#~ msgid "Can import to B-Translator new translation files (in the PO format)."
+#~ msgid "Can import to Q-Translate new translation files (in the PO format)."
 #~ msgstr ""
-#~ "Mund të importojë në B-Translator skedarë të rinj përkthimi (në formatin "
+#~ "Mund të importojë në Q-Translate skedarë të rinj përkthimi (në formatin "
 #~ "PO)."
 
 #~ msgid "Export translation files."
 #~ msgstr "Eksporto skedarët e përkthimit."
 
 #~ msgid ""
-#~ "Can export translations from B-Translator (either in PO format, or as "
+#~ "Can export translations from Q-Translate (either in PO format, or as "
 #~ "diff/ediff)."
 #~ msgstr ""
-#~ "Mund të eksportojë përkthimet nga B-Translator (në format PO ose si diff/"
+#~ "Mund të eksportojë përkthimet nga Q-Translate (në format PO ose si diff/"
 #~ "ediff)."
 
 #~ msgid "Statistics."
 #~ msgstr "Statistikat."
 
-#~ msgid "Can access global statistics of B-Translator."
-#~ msgstr "Mund të shohë statistikat e përgjithshme në B-Translator."
+#~ msgid "Can access global statistics of Q-Translate."
+#~ msgstr "Mund të shohë statistikat e përgjithshme në Q-Translate."
 
 #~ msgid "Resolve issues."
 #~ msgstr "Zgjidh problemet."
@@ -668,8 +668,8 @@ msgstr ""
 #~ msgid "Can resolve flag issues and other problems."
 #~ msgstr "Mund të vendosë rreth sinjalizimeve dhe për probleme të tjera."
 
-#~ msgid "Can perform administration tasks for B-Translator."
-#~ msgstr "Mund të bëjë detyra administruese në B-Translator."
+#~ msgid "Can perform administration tasks for Q-Translate."
+#~ msgstr "Mund të bëjë detyra administruese në Q-Translate."
 
 #~ msgid "Used with context: %context"
 #~ msgstr "Përdorur në rrethanat: %context"
@@ -952,11 +952,11 @@ msgstr ""
 #~ msgid "Export file '!filename' does not exist!"
 #~ msgstr "Skedari i eksportit '!filename' nuk gjendet!"
 
-#~ msgid "Latest translation suggestions on B-Translator"
-#~ msgstr "Përkthimet e fundit të propozuara në B-Translator"
+#~ msgid "Latest translation suggestions on Q-Translate"
+#~ msgstr "Përkthimet e fundit të propozuara në Q-Translate"
 
-#~ msgid "Latest translation suggestions on B-Translator, for @domain"
-#~ msgstr "Përkthimet më të fundit të sugjeruara në B-Translator, për @domain"
+#~ msgid "Latest translation suggestions on Q-Translate, for @domain"
+#~ msgstr "Përkthimet më të fundit të sugjeruara në Q-Translate, për @domain"
 
 #~ msgid "You do not have enough rights for submitting votes!"
 #~ msgstr "Nuk ke të drejta të mjaftueshme për të dhënë vota!"
@@ -1003,9 +1003,9 @@ msgstr ""
 #~ msgstr[1] "@count përkthime të fshira"
 
 #, fuzzy
-#~| msgid "B-Translator Settings"
-#~ msgid "B-Translator Web Services"
-#~ msgstr "Rregullimet në B-Translator"
+#~| msgid "Q-Translate Settings"
+#~ msgid "Q-Translate Web Services"
+#~ msgstr "Rregullimet në Q-Translate"
 
 #~ msgid "Use PHPMailer to send e-mails"
 #~ msgstr "Përdor PHPMailer për të dërguar postën"

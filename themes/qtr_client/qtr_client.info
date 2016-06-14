@@ -1,5 +1,5 @@
 name = qtr_client
-description = A Bootstrap Sub-theme for B-Translator Client.
+description = A Bootstrap Sub-theme for Q-Translate Client.
 core = 7.x
 base theme = bootstrap
 

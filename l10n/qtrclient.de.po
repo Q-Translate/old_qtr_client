@@ -49,11 +49,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: qtr_client.info:0
-msgid "B-Translator Client"
+msgid "Q-Translate Client"
 msgstr ""
 
 #: qtr_client.info:0
-msgid "Drupal installation profile for B-Translator Client."
+msgid "Drupal installation profile for Q-Translate Client."
 msgstr ""
 
 #: install/config/gmailsmtp.php:46
@@ -109,7 +109,7 @@ msgid "Mail Settings"
 msgstr ""
 
 #: qtr_client.profile:36
-msgid "B-Translator Settings"
+msgid "Q-Translate Settings"
 msgstr ""
 
 #: qtr_client.profile:42

@@ -2,7 +2,7 @@
 
 ### read $translation_lng
 echo "
-===> Translation language of B-Translator Client
+===> Translation language of Q-Translate Client
 
 This is the code of the translation language
 of your client site (something like 'fr' or 'fr_FR').

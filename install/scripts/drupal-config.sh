@@ -2,9 +2,9 @@
 
 ### prevent robots from crawling translations
 sed -i $drupal_dir/robots.txt \
-    -e '/# B-Translator/,$ d'
+    -e '/# Q-Translate/,$ d'
 cat <<EOF >> $drupal_dir/robots.txt
-# B-Translator
+# Q-Translate
 Disallow: /qtr/
 Disallow: /?q=qtr/
 Disallow: /translations/

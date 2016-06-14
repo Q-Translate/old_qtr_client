@@ -14,7 +14,7 @@ bcl_admin_passwd='admin'
 gmail_account='MyEmailAddress@gmail.com'
 gmail_passwd=
 
-### Translation language of B-Translator Client.
+### Translation language of Q-Translate Client.
 translation_lng='fr'
 
 ### Mysql passwords. Leave it as 'random'

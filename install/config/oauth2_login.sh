@@ -4,18 +4,18 @@
 echo "
 ===> Settings for OAuth2 Login
 
-User login is done with OAuth2 to a B-Translator Server.
+User login is done with OAuth2 to a Q-Translate Server.
 Translation data is also retrieved/stored to this server
-using the B-Translator API. For these to work, a client must be
-registered on the B-Translator Server. Give below the URL
-of the B-Translator server and the Client ID and Client Secret
+using the Q-Translate API. For these to work, a client must be
+registered on the Q-Translate Server. Give below the URL
+of the Q-Translate server and the Client ID and Client Secret
 of the registered client.
 "
 
 if [ -z "${oauth2_server_url+xxx}" -o "$oauth2_server_url" = '' ]
 then
     oauth2_server_url='http://dev.qtranslator.org'
-    read -p "Enter the URL of the B-Translator Server [$oauth2_server_url]: " input
+    read -p "Enter the URL of the Q-Translate Server [$oauth2_server_url]: " input
     oauth2_server_url=${input:-$oauth2_server_url}
 fi
 

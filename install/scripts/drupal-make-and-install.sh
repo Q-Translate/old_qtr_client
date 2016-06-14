@@ -40,7 +40,7 @@ rm -rf qtr_client-bak/
 if [ "$development" = 'true' ]
 then
     cd $drupal_dir/profiles/qtr_client/modules/contrib/qtrclient
-    git clone https://github.com/B-Translator/qtrclient.git
+    git clone https://github.com/Q-Translate/qtrclient.git
     cp -a qtrclient/.git .
     rm -rf qtrclient/
 fi
@@ -60,7 +60,7 @@ fi
 db_name=bcl
 db_user=bcl
 db_pass=bcl
-site_name="B-Translator"
+site_name="Q-Translate"
 site_mail="$gmail_account"
 account_name=admin
 account_pass="$bcl_admin_passwd"

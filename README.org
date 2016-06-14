@@ -1,9 +1,9 @@
 
-Drupal installation profile for B-Translator Client.
+Drupal installation profile for Q-Translate Client.
 
-* What is B-Translator
+* What is Q-Translate
 
-  The codename *B-Translator* can be decoded like *Bee Translator*,
+  The codename *Q-Translate* can be decoded like *Bee Translator*,
   since it aims at collecting very small translation contributions
   from a wide crowd of people and to dilute them into something
   useful.
@@ -94,7 +94,7 @@ Drupal installation profile for B-Translator Client.
   correct website container is handled by the *wsproxy* container,
   based on the domain name.
 
-  *NOTE:* Although [[https://github.com/B-Translator/qtr_client/blob/master/utils/docker-install.sh][utils/docker-install.sh]] is handy for making a quick
+  *NOTE:* Although [[https://github.com/Q-Translate/qtr_client/blob/master/utils/docker-install.sh][utils/docker-install.sh]] is handy for making a quick
   installation, it is highly recommended to read and understand this
   script, because this will be helpful for maintaining the
   installation.  It is not so long and it is easy to understand.
@@ -124,7 +124,7 @@ Drupal installation profile for B-Translator Client.
   docker/exec.sh install/config/domain.sh
   docker/exec.sh install/config/oauth2_login.sh
   #+END_EXAMPLE
-  These scripts can be found on [[https://github.com/B-Translator/qtr_client/tree/master/install/config][install/config/]].
+  These scripts can be found on [[https://github.com/Q-Translate/qtr_client/tree/master/install/config][install/config/]].
 
 
 * Contacts
@@ -142,13 +142,13 @@ Drupal installation profile for B-Translator Client.
 
   - Misc
     + Homepage: http://info.qtranslator.org
-    + Wiki: https://github.com/B-Translator/qtr_client/wiki
-    + Issues: https://github.com/B-Translator/qtr_client/issues
+    + Wiki: https://github.com/Q-Translate/qtr_client/wiki
+    + Issues: https://github.com/Q-Translate/qtr_client/issues
 
 
 * Sites
 
-  Sites using B-Translator:
+  Sites using Q-Translate:
   - https://l10n.org.al - Albanian translations.
 
   To install and setup your site you would need some basic skills on
