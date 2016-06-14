@@ -9,7 +9,7 @@
  */
 function bcl_googleanalytics_menu() {
   $items = array();
-  $items['admin/config/btr/googleanalytics'] = array(
+  $items['admin/config/qtr/googleanalytics'] = array(
     'title'            => 'GoogleAnalytics',
     'description'      => 'Private GoogleAnalytics settings.',
     'page callback'    => 'drupal_get_form',

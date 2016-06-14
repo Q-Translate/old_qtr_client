@@ -132,26 +132,26 @@ function bcl_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'btrProject-list' => array(
-          'module' => 'btrProject',
+        'qtrProject-list' => array(
+          'module' => 'qtrProject',
           'delta' => 'list',
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
-        'btrVocabulary-list' => array(
-          'module' => 'btrVocabulary',
+        'qtrVocabulary-list' => array(
+          'module' => 'qtrVocabulary',
           'delta' => 'list',
           'region' => 'sidebar_first',
           'weight' => '-9',
         ),
-        'btrTranslations-statistics' => array(
-          'module' => 'btrTranslations',
+        'qtrTranslations-statistics' => array(
+          'module' => 'qtrTranslations',
           'delta' => 'statistics',
           'region' => 'sidebar_first',
           'weight' => '-8',
         ),
-        'btrTranslations-topcontrib' => array(
-          'module' => 'btrTranslations',
+        'qtrTranslations-topcontrib' => array(
+          'module' => 'qtrTranslations',
           'delta' => 'topcontrib',
           'region' => 'sidebar_first',
           'weight' => '-7',
@@ -273,7 +273,7 @@ function bcl_layout_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'translations';
-  $context->description = 'The pages where the translation/feedback activity is happening (module btrClient).';
+  $context->description = 'The pages where the translation/feedback activity is happening (module qtrClient).';
   $context->tag = '';
   $context->conditions = array(
     'path' => array(
@@ -316,7 +316,7 @@ function bcl_layout_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('The pages where the translation/feedback activity is happening (module btrClient).');
+  t('The pages where the translation/feedback activity is happening (module qtrClient).');
   $export['translations'] = $context;
 
   return $export;

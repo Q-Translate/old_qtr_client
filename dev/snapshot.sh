@@ -80,9 +80,9 @@ case $action in
         mv $snapshot/bcl* $drupal_dir
         mount -a
 
-        profile_dir=$drupal_dir/profiles/btr_client
+        profile_dir=$drupal_dir/profiles/qtr_client
         mv $profile_dir $profile_dir-old
-        cp -a $drupal_dir-del/profiles/btr_client $profile_dir
+        cp -a $drupal_dir-del/profiles/qtr_client $profile_dir
 
         for subdir in libraries modules/contrib themes/contrib
         do

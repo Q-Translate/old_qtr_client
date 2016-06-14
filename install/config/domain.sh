@@ -4,7 +4,7 @@ echo "
 ===> Set the domain name (fqdn)
 
 This is the domain that you have (or plan to get)
-for the btr_client.
+for the qtr_client.
 
 It will modify the files:
  1) /etc/hostname
@@ -21,7 +21,7 @@ old_bcl_domain=${old_bcl_domain:-example.org}
 ### get the new domain
 if [ -z "${bcl_domain+xxx}" -o "$bcl_domain" = '' ]
 then
-    read -p "Enter the domain name for btr_client [$old_bcl_domain]: " input
+    read -p "Enter the domain name for qtr_client [$old_bcl_domain]: " input
     bcl_domain=${input:-$old_bcl_domain}
 fi
 

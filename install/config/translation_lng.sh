@@ -14,8 +14,8 @@ then
     translation_lng=${input:-$translation_lng}
 fi
 
-### set drupal variable btrClient_translation_lng
-drush @local_bcl --yes --exact vset btrClient_translation_lng $translation_lng
+### set drupal variable qtrClient_translation_lng
+drush @local_bcl --yes --exact vset qtrClient_translation_lng $translation_lng
 
 ### add $translation_lng as a drupal language
 if [ "$translation_lng" != 'all' ]

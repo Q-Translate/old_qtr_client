@@ -92,7 +92,7 @@ echo 'php_admin_value[max_execution_time] = 90' >> /etc/php5/fpm/pool.d/www.conf
 update-locale
 
 ### enable apache2 as a webserver
-dev_scripts="$drupal_dir/profiles/btr_client/dev"
+dev_scripts="$drupal_dir/profiles/qtr_client/dev"
 $dev_scripts/webserver.sh apache2
 
 ### customize the configuration of sshd

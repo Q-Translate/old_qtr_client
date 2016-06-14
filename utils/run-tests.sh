@@ -10,7 +10,7 @@
 ###     utils/run-tests.sh stdout
 
 ### the URL where the application being tested can be accessed
-URL="https://tst.btranslator.org/"
+URL="https://tst.qtranslator.org/"
 
 ### if a parameter is given, then the output will be dumped on the screen
 ### otherwise it will be saved on a file on directory 'tests/'
@@ -42,9 +42,9 @@ php scripts/run-tests.sh --clean
 ### run the test scripts
 if [ "$stdout" != '' ]
 then
-    php scripts/run-tests.sh --url "$URL" --verbose --color btr_client
+    php scripts/run-tests.sh --url "$URL" --verbose --color qtr_client
 else
-    php scripts/run-tests.sh --url "$URL" --verbose btr_client > $output_file
+    php scripts/run-tests.sh --url "$URL" --verbose qtr_client > $output_file
     echo
     echo " - Results stored on the file: "
     echo "     $drupal_dir/$output_file"

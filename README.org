@@ -12,7 +12,7 @@ Drupal installation profile for B-Translator Client.
   anybody to give his small contribution for translating programs or
   making their translations better.
 
-  For more detailed information see: http://info.btranslator.org
+  For more detailed information see: http://info.qtranslator.org
 
 
 * Installation
@@ -28,7 +28,7 @@ Drupal installation profile for B-Translator Client.
   + Link the docker directory inside the working directory:
     #+BEGIN_EXAMPLE
     cd workdir/
-    ln -s ../btr_client/docker .
+    ln -s ../qtr_client/docker .
     #+END_EXAMPLE
 
   + Modify and customize the settings:
@@ -40,10 +40,10 @@ Drupal installation profile for B-Translator Client.
   + Build a Docker image:
     #+BEGIN_EXAMPLE
     docker/build.sh settings.sh
-    tail -f logs/nohup-btr_client-master-20150929.out
-    less -r logs/nohup-btr_client-master-20150929.out
+    tail -f logs/nohup-qtr_client-master-20150929.out
+    less -r logs/nohup-qtr_client-master-20150929.out
     #+END_EXAMPLE
-    This will create a docker image, named =btr_client:master= with a
+    This will create a docker image, named =qtr_client:master= with a
     minimal ubuntu system and everything that is needed for the normal
     work of the Drupal application.
 
@@ -62,7 +62,7 @@ Drupal installation profile for B-Translator Client.
 
   + If =development=true= is set on the settings, then the code of the
     application inside the container will be linked to the directory
-    ~btr_client/~, so that you can edit and work on it easily.
+    ~qtr_client/~, so that you can edit and work on it easily.
 
   + If it is installed on a local machine (for testing or
     development), add the domain name =example.org= on ~/etc/hosts~,
@@ -94,7 +94,7 @@ Drupal installation profile for B-Translator Client.
   correct website container is handled by the *wsproxy* container,
   based on the domain name.
 
-  *NOTE:* Although [[https://github.com/B-Translator/btr_client/blob/master/utils/docker-install.sh][utils/docker-install.sh]] is handy for making a quick
+  *NOTE:* Although [[https://github.com/B-Translator/qtr_client/blob/master/utils/docker-install.sh][utils/docker-install.sh]] is handy for making a quick
   installation, it is highly recommended to read and understand this
   script, because this will be helpful for maintaining the
   installation.  It is not so long and it is easy to understand.
@@ -124,26 +124,26 @@ Drupal installation profile for B-Translator Client.
   docker/exec.sh install/config/domain.sh
   docker/exec.sh install/config/oauth2_login.sh
   #+END_EXAMPLE
-  These scripts can be found on [[https://github.com/B-Translator/btr_client/tree/master/install/config][install/config/]].
+  These scripts can be found on [[https://github.com/B-Translator/qtr_client/tree/master/install/config][install/config/]].
 
 
 * Contacts
 
-  - Email: info@btranslator.org
+  - Email: info@qtranslator.org
 
   - Follow on Twitter: https://twitter.com/b_translator
 
   - Discussion group/forum
-    + Email: /btranslator@googlegroups.com/
-    + Web: https://groups.google.com/forum/?fromgroups&hl=en#!forum/btranslator
+    + Email: /qtranslator@googlegroups.com/
+    + Web: https://groups.google.com/forum/?fromgroups&hl=en#!forum/qtranslator
     + Google+ Community: https://plus.google.com/u/0/communities/109327047119841706609
 
-  - Chat/IRC: *#btranslator* on *irc.freenode.net*
+  - Chat/IRC: *#qtranslator* on *irc.freenode.net*
 
   - Misc
-    + Homepage: http://info.btranslator.org
-    + Wiki: https://github.com/B-Translator/btr_client/wiki
-    + Issues: https://github.com/B-Translator/btr_client/issues
+    + Homepage: http://info.qtranslator.org
+    + Wiki: https://github.com/B-Translator/qtr_client/wiki
+    + Issues: https://github.com/B-Translator/qtr_client/issues
 
 
 * Sites

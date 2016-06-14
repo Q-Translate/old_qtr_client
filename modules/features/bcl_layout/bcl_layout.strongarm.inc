@@ -294,7 +294,7 @@ function bcl_layout_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'theme_btr_client_settings';
+  $strongarm->name = 'theme_qtr_client_settings';
   $strongarm->value = array(
     'toggle_logo' => 1,
     'toggle_name' => 1,
@@ -306,10 +306,10 @@ function bcl_layout_strongarm() {
     'toggle_main_menu' => 1,
     'toggle_secondary_menu' => 1,
     'default_logo' => 0,
-    'logo_path' => 'profiles/btr_client/modules/features/bcl_layout/small_logo.png',
+    'logo_path' => 'profiles/qtr_client/modules/features/bcl_layout/small_logo.png',
     'logo_upload' => '',
     'default_favicon' => 0,
-    'favicon_path' => 'profiles/btr_client/modules/features/bcl_layout/favicon.png',
+    'favicon_path' => 'profiles/qtr_client/modules/features/bcl_layout/favicon.png',
     'favicon_upload' => '',
     'general__active_tab' => 'edit-theme-settings',
     'bootstrap__active_tab' => 'edit-javascript',
@@ -368,13 +368,13 @@ function bcl_layout_strongarm() {
     'bootstrap_toggle_jquery_error' => 0,
     'favicon_mimetype' => 'image/png',
   );
-  $export['theme_btr_client_settings'] = $strongarm;
+  $export['theme_qtr_client_settings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'theme_default';
-  $strongarm->value = 'btr_client';
+  $strongarm->value = 'qtr_client';
   $export['theme_default'] = $strongarm;
 
   return $export;

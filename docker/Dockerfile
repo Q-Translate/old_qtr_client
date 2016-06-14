@@ -5,10 +5,10 @@ COPY install/packages.sh /tmp/
 RUN DEBIAN_FRONTEND=noninteractive /tmp/packages.sh
 
 ### Copy the source code and install.
-COPY . /usr/local/src/btr_client/
-ENV code_dir /usr/local/src/btr_client
-WORKDIR /usr/local/src/btr_client/
+COPY . /usr/local/src/qtr_client/
+ENV code_dir /usr/local/src/qtr_client
+WORKDIR /usr/local/src/qtr_client/
 RUN ["install/install.sh"]
 
 ### Set the default dir to the code of the application.
-WORKDIR /var/www/bcl/profiles/btr_client
+WORKDIR /var/www/bcl/profiles/qtr_client

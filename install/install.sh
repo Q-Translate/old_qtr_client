@@ -21,5 +21,5 @@ export drush="drush --root=$drupal_dir"
 ### system level configuration (services etc.)
 ./system-config.sh
 
-### btr_client configuration
+### qtr_client configuration
 $code_dir/install/config.sh

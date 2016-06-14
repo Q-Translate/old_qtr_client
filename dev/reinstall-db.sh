@@ -1,5 +1,5 @@
 #!/bin/bash -x
-### Reinstall the Drupal profile 'btr_client' and its features.
+### Reinstall the Drupal profile 'qtr_client' and its features.
 ### This script touches only the database of Drupal (bcl)
 ### and nothing else. Useful for testing the features.
 ###
@@ -30,7 +30,7 @@ cd $drupal_dir
 db_name=$(drush sql-connect | tr ' ' "\n" | grep -e '--database=' | cut -d= -f2)
 db_user=$(drush sql-connect | tr ' ' "\n" | grep -e '--user=' | cut -d= -f2)
 db_pass=$(drush sql-connect | tr ' ' "\n" | grep -e '--password=' | cut -d= -f2)
-lng=$(drush vget btrClient_translation_lng --format=string)
+lng=$(drush vget qtrClient_translation_lng --format=string)
 site_name=$(drush vget site_name --format=string)
 site_mail=$(drush vget site_mail --format=string)
 account_name=admin
@@ -48,18 +48,18 @@ $mysql -e "
 ### start site installation
 sed -e '/memory_limit/ c memory_limit = -1' -i /etc/php5/cli/php.ini
 cd $drupal_dir
-drush site-install --verbose --yes btr_client \
+drush site-install --verbose --yes qtr_client \
       --db-url="mysql://$db_user:$db_pass@localhost/$db_name" \
       --site-name="$site_name" --site-mail="$site_mail" \
       --account-name="$account_name" --account-pass="$account_pass" --account-mail="$account_mail"
 
-### install btrProject and btrVocabulary
-drush --yes pm-enable btrProject
-drush --yes pm-enable btrVocabulary
+### install qtrProject and qtrVocabulary
+drush --yes pm-enable qtrProject
+drush --yes pm-enable qtrVocabulary
 
 ## install features modules
-drush --yes pm-enable bcl_btrClient
-drush --yes features-revert bcl_btrClient
+drush --yes pm-enable bcl_qtrClient
+drush --yes features-revert bcl_qtrClient
 
 drush --yes pm-enable bcl_misc
 drush --yes features-revert bcl_misc
@@ -84,10 +84,10 @@ drush --yes pm-enable bcl_disqus
 #drush --yes pm-enable bcl_fb
 
 ### configure oauth2 login
-export oauth2_server_url='http://dev.btranslator.org'
+export oauth2_server_url='http://dev.qtranslator.org'
 export oauth2_client_id='client1'
 export oauth2_client_secret='0123456789'
-config=$drupal_dir/profiles/btr_client/install/config
+config=$drupal_dir/profiles/qtr_client/install/config
 $config/oauth2_login.sh $alias
 
 #exit

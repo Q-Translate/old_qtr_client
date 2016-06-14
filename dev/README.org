@@ -35,17 +35,17 @@ Development Tools, Tips and Tricks
   in this container.
   #+BEGIN_EXAMPLE
   docker stop bcl
-  docker commit bcl btr_client:1
+  docker commit bcl qtr_client:1
   docker images
   docker rm bcl
   docker run -d --name=bcl --hostname=example.org \
-	     -p 80:80 -p 443:443 -p 2201:2201 btr_client:1
+	     -p 80:80 -p 443:443 -p 2201:2201 qtr_client:1
   #+END_EXAMPLE
 
   Now we can enter the container and start the sshd server:
   #+BEGIN_EXAMPLE
   docker-enter bcl
-  cd /usr/local/src/btr_client/
+  cd /usr/local/src/qtr_client/
   dev/install-sshd.sh 2201
   #+END_EXAMPLE
 
@@ -59,7 +59,7 @@ Development Tools, Tips and Tricks
   We can choose one of them like this:
   #+BEGIN_EXAMPLE
   docker-enter bcl
-  cd /usr/local/src/btr_client/
+  cd /usr/local/src/qtr_client/
   dev/webserver.sh apache2
   dev/webserver.sh nginx
   #+END_EXAMPLE
@@ -72,7 +72,7 @@ Development Tools, Tips and Tricks
   Inside the container you can make a clone for development like this:
   #+BEGIN_EXAMPLE
   docker-enter bcl
-  cd /usr/local/src/btr_client/
+  cd /usr/local/src/qtr_client/
   dev/clone.sh bcl bcl_dev1
   dev/clone.sh bcl_dev1 bcl_test1
   #+END_EXAMPLE
@@ -89,7 +89,7 @@ Development Tools, Tips and Tricks
   (remove/erase) a clone, you can use *clone_rm.sh* like this:
   #+BEGIN_EXAMPLE
   docker-enter bcl
-  cd /usr/local/src/btr_client/
+  cd /usr/local/src/qtr_client/
   dev/clone_rm.sh bcl_dev1
   dev/clone_rm.sh bcl_test1
   #+END_EXAMPLE
@@ -100,7 +100,7 @@ Development Tools, Tips and Tricks
   =dev/config.php=:
   #+BEGIN_EXAMPLE
   docker-enter bcl
-  cd /usr/local/src/btr_client/
+  cd /usr/local/src/qtr_client/
   drush @bcl_dev php-script dev/config.php dev2
   #+END_EXAMPLE
 
@@ -125,7 +125,7 @@ Development Tools, Tips and Tricks
   done like this:
   #+BEGIN_EXAMPLE
   docker-enter bcl
-  cd /usr/local/src/btr_client/
+  cd /usr/local/src/qtr_client/
   dev/snapshot.sh make @bcl
   dev/snapshot.sh make @bcl_dev
   #+END_EXAMPLE
@@ -167,15 +167,15 @@ Development Tools, Tips and Tricks
     #+BEGIN_EXAMPLE
     docker-enter bcl
     cd /var/www/bcl_dev/profiles/
-    cp -a btr_client/ btr_client-bak
+    cp -a qtr_client/ qtr_client-bak
     exit
     #+END_EXAMPLE
 
-  + Then we save the image of the container as =btr_client:dev=, in order
+  + Then we save the image of the container as =qtr_client:dev=, in order
     to start a new container based on it:
     #+BEGIN_EXAMPLE
     docker stop bcl
-    docker commit bcl btr_client:dev
+    docker commit bcl qtr_client:dev
     docker images
     #+END_EXAMPLE
 
@@ -183,8 +183,8 @@ Development Tools, Tips and Tricks
     host system (using the option =-v=):
     #+BEGIN_EXAMPLE
     docker run -d --name=bcl_dev --hostname=dev.example.org \
-	       -v $(pwd)/bcl_dev:/var/www/bcl_dev/profiles/btr_client/
-	       -p 80:80 -p 443:443 btr_client:dev
+	       -v $(pwd)/bcl_dev:/var/www/bcl_dev/profiles/qtr_client/
+	       -p 80:80 -p 443:443 qtr_client:dev
     #+END_EXAMPLE
     *Note:* The container *bcl* must be stoped before we create and
     start the new container *bcl_dev*, otherwise the ports 80 and 443
@@ -194,10 +194,10 @@ Development Tools, Tips and Tricks
     directory to the shared directory:
     #+BEGIN_EXAMPLE
     docker-enter bcl_dev
-    cd /var/www/bcl_dev/profiles/btr_client/
-    cp -a ../btr_client-bak/* .
-    cp -a ../btr_client-bak/.* .
-    rm -rf ../btr_client-bak/
+    cd /var/www/bcl_dev/profiles/qtr_client/
+    cp -a ../qtr_client-bak/* .
+    cp -a ../qtr_client-bak/.* .
+    rm -rf ../qtr_client-bak/
     exit
     #+END_EXAMPLE
 
@@ -209,8 +209,8 @@ Development Tools, Tips and Tricks
 
 * Pushing commits
 
-  The copy of the application on =/var/www/bcl_dev/profiles/btr_client/=
-  (as well as the one on =/var/www/bcl/profiles/btr_client/=) are actually
+  The copy of the application on =/var/www/bcl_dev/profiles/qtr_client/=
+  (as well as the one on =/var/www/bcl/profiles/qtr_client/=) are actually
   clones of the git repository of the project on GitHub, so we can
   *pull* from it and *push* to it. Pulling (to get up-to-date) can be
   done by everybody, however pushing requires a username and password
@@ -287,7 +287,7 @@ Development Tools, Tips and Tricks
     'ssh-options' => '-p 2201 -i /root/.ssh/id_rsa',
 
     'path-aliases' => array (
-      '%profile' => 'profiles/btr_client',
+      '%profile' => 'profiles/qtr_client',
       '%downloads' => '/var/www/downloads',
     ),
 

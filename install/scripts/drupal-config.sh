@@ -5,8 +5,8 @@ sed -i $drupal_dir/robots.txt \
     -e '/# B-Translator/,$ d'
 cat <<EOF >> $drupal_dir/robots.txt
 # B-Translator
-Disallow: /btr/
-Disallow: /?q=btr/
+Disallow: /qtr/
+Disallow: /?q=qtr/
 Disallow: /translations/
 Disallow: /?q=translations/
 Disallow: /vocabulary/
@@ -50,7 +50,7 @@ EOF
 cat >> $drupal_settings << EOF
 // Adds memcache as a cache backend
 /* comment memcache config
-\$conf['cache_backends'][] = 'profiles/btr_client/modules/contrib/memcache/memcache.inc';
+\$conf['cache_backends'][] = 'profiles/qtr_client/modules/contrib/memcache/memcache.inc';
 // Makes it so that memcache is the default caching backend
 \$conf['cache_default_class'] = 'MemCacheDrupal';
 // Keep forms in persistent storage, as per discussed at the beginning
@@ -65,19 +65,19 @@ cat >> $drupal_settings << EOF
 \$conf['memcache_bins'] = array('cache' => 'default');
 
 // If you wanted multiple Drupal installations to share one Memcache instance use the prefix like so:
-\$conf['memcache_key_prefix'] = 'btr_client';
+\$conf['memcache_key_prefix'] = 'qtr_client';
 comment memcache config */
 
 EOF
 
-### install btrProject and btrVocabulary
+### install qtrProject and qtrVocabulary
 ### $drush is an alias for 'drush --root=/var/www/bcl'
-$drush --yes pm-enable btrProject
-$drush --yes pm-enable btrVocabulary
+$drush --yes pm-enable qtrProject
+$drush --yes pm-enable qtrVocabulary
 
 ### install additional features
-$drush --yes pm-enable bcl_btrClient
-$drush --yes features-revert bcl_btrClient
+$drush --yes pm-enable bcl_qtrClient
+$drush --yes features-revert bcl_qtrClient
 
 $drush --yes pm-enable bcl_misc
 $drush --yes features-revert bcl_misc

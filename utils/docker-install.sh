@@ -1,5 +1,5 @@
 #!/bin/bash -x
-### Install the containers of wsproxy and btr_client.
+### Install the containers of wsproxy and qtr_client.
 
 ### stop on error
 set -e
@@ -14,7 +14,7 @@ if [ "$1" != "--dont-fork" ]
 then
     # this script should be called recursively by itself
     datestamp=$(date +%F | tr -d -)
-    nohup_out=$workdir/nohup-btr_client-$datestamp.out
+    nohup_out=$workdir/nohup-qtr_client-$datestamp.out
     rm -f $nohup_out
     nohup nice $0 --dont-fork $@ > $nohup_out &
     sleep 1
@@ -45,20 +45,20 @@ wsproxy/rm.sh 2>/dev/null
 wsproxy/build.sh
 wsproxy/run.sh
 
-### get btr_client
-if test -d $srcdir/btr_client
+### get qtr_client
+if test -d $srcdir/qtr_client
 then
-    cd $srcdir/btr_client
+    cd $srcdir/qtr_client
     git pull
 else
     cd $srcdir/
-    git clone https://github.com/B-Translator/btr_client
+    git clone https://github.com/B-Translator/qtr_client
 fi
 
 ### create a link on workdir
 mkdir -p $workdir/bcl
 cd $workdir/bcl/
-ln -sf $srcdir/btr_client/docker .
+ln -sf $srcdir/qtr_client/docker .
 
 ### build the image
 cd $workdir/

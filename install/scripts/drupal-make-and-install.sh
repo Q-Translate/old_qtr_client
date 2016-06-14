@@ -1,48 +1,48 @@
 #!/bin/bash -x
 
 ### make sure that we have the right git branch on the make file
-makefile="$code_dir/build-btrclient.make"
+makefile="$code_dir/build-qtrclient.make"
 sed -i $makefile \
-    -e "/btr_client..download..branch/ c projects[btr_client][download][branch] = $bcl_git_branch"
+    -e "/qtr_client..download..branch/ c projects[qtr_client][download][branch] = $bcl_git_branch"
 
 ### retrieve all the projects/modules and build the application directory
 rm -rf $drupal_dir
 drush make --prepare-install --force-complete \
-           --contrib-destination=profiles/btr_client \
+           --contrib-destination=profiles/qtr_client \
            $makefile $drupal_dir
 
 ### copy the bootstrap library to the custom theme, etc.
-cd $drupal_dir/profiles/btr_client/
+cd $drupal_dir/profiles/qtr_client/
 cp -a libraries/bootstrap themes/contrib/bootstrap/
-cp -a libraries/bootstrap themes/btr_client/
-cp libraries/bootstrap/less/variables.less themes/btr_client/less/
+cp -a libraries/bootstrap themes/qtr_client/
+cp libraries/bootstrap/less/variables.less themes/qtr_client/less/
 
 ### copy hybriauth provider DrupalOAuth2.php to the right place
-cd $drupal_dir/profiles/btr_client/libraries/
+cd $drupal_dir/profiles/qtr_client/libraries/
 cp hybridauth-drupaloauth2/DrupalOAuth2.php \
    hybridauth/hybridauth/Hybrid/Providers/
 
-### Replace the profile btr_client with a version
+### Replace the profile qtr_client with a version
 ### that is a git clone, so that any updates
 ### can be retrieved easily (without having to
 ### reinstall the whole application).
 cd $drupal_dir/profiles/
-mv btr_client btr_client-bak
+mv qtr_client qtr_client-bak
 cp -a $code_dir .
 ### copy contrib libraries and modules
-cp -a btr_client-bak/libraries/ btr_client/
-cp -a btr_client-bak/modules/contrib/ btr_client/modules/
-cp -a btr_client-bak/themes/contrib/ btr_client/themes/
+cp -a qtr_client-bak/libraries/ qtr_client/
+cp -a qtr_client-bak/modules/contrib/ qtr_client/modules/
+cp -a qtr_client-bak/themes/contrib/ qtr_client/themes/
 ### cleanup
-rm -rf btr_client-bak/
+rm -rf qtr_client-bak/
 
-### get a clone of btrclient from github
+### get a clone of qtrclient from github
 if [ "$development" = 'true' ]
 then
-    cd $drupal_dir/profiles/btr_client/modules/contrib/btrclient
-    git clone https://github.com/B-Translator/btrclient.git
-    cp -a btrclient/.git .
-    rm -rf btrclient/
+    cd $drupal_dir/profiles/qtr_client/modules/contrib/qtrclient
+    git clone https://github.com/B-Translator/qtrclient.git
+    cp -a qtrclient/.git .
+    rm -rf qtrclient/
 fi
 
 ### create the downloads dir
@@ -77,13 +77,13 @@ $mysql -e "
 ### start site installation
 sed -e '/memory_limit/ c memory_limit = -1' -i /etc/php5/cli/php.ini
 cd $drupal_dir
-drush site-install --verbose --yes btr_client \
+drush site-install --verbose --yes qtr_client \
       --db-url="mysql://$db_user:$db_pass@localhost/$db_name" \
       --site-name="$site_name" --site-mail="$site_mail" \
       --account-name="$account_name" --account-pass="$account_pass" --account-mail="$account_mail"
 
-### set drupal variable btrClient_translation_lng
-drush --root=$drupal_dir --yes --exact vset btrClient_translation_lng $translation_lng
+### set drupal variable qtrClient_translation_lng
+drush --root=$drupal_dir --yes --exact vset qtrClient_translation_lng $translation_lng
 
 ### install also multi-language support
 mkdir -p $drupal_dir/sites/all/translations

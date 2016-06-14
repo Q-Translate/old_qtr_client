@@ -10,10 +10,10 @@
 function bcl_layout_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu_api-examples:http://info.btranslator.org/api-examples-js/
-  $menu_links['main-menu_api-examples:http://info.btranslator.org/api-examples-js/'] = array(
+  // Exported menu link: main-menu_api-examples:http://info.qtranslator.org/api-examples-js/
+  $menu_links['main-menu_api-examples:http://info.qtranslator.org/api-examples-js/'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'http://info.btranslator.org/api-examples-js/',
+    'link_path' => 'http://info.qtranslator.org/api-examples-js/',
     'router_path' => '',
     'link_title' => 'API Examples',
     'options' => array(
@@ -23,7 +23,7 @@ function bcl_layout_menu_default_menu_links() {
         ),
         'title' => '',
       ),
-      'identifier' => 'main-menu_api-examples:http://info.btranslator.org/api-examples-js/',
+      'identifier' => 'main-menu_api-examples:http://info.qtranslator.org/api-examples-js/',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -33,10 +33,10 @@ function bcl_layout_menu_default_menu_links() {
     'weight' => -46,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_api-reference:http://info.btranslator.org/api/
-  $menu_links['main-menu_api-reference:http://info.btranslator.org/api/'] = array(
+  // Exported menu link: main-menu_api-reference:http://info.qtranslator.org/api/
+  $menu_links['main-menu_api-reference:http://info.qtranslator.org/api/'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'http://info.btranslator.org/api/',
+    'link_path' => 'http://info.qtranslator.org/api/',
     'router_path' => '',
     'link_title' => 'API Reference',
     'options' => array(
@@ -46,7 +46,7 @@ function bcl_layout_menu_default_menu_links() {
         ),
         'title' => '',
       ),
-      'identifier' => 'main-menu_api-reference:http://info.btranslator.org/api/',
+      'identifier' => 'main-menu_api-reference:http://info.qtranslator.org/api/',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -93,17 +93,17 @@ function bcl_layout_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 0,
   );
-  // Exported menu link: main-menu_projects:btr/project
-  $menu_links['main-menu_projects:btr/project'] = array(
+  // Exported menu link: main-menu_projects:qtr/project
+  $menu_links['main-menu_projects:qtr/project'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'btr/project',
-    'router_path' => 'btr/project',
+    'link_path' => 'qtr/project',
+    'router_path' => 'qtr/project',
     'link_title' => 'Projects',
     'options' => array(
       'attributes' => array(
         'title' => 'List of projects',
       ),
-      'identifier' => 'main-menu_projects:btr/project',
+      'identifier' => 'main-menu_projects:qtr/project',
     ),
     'module' => 'menu',
     'hidden' => 0,
