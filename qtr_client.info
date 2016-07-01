@@ -86,7 +86,6 @@ dependencies[] = advuser
 
 ;;; Performance
 dependencies[] = boost
-;dependencies[] = memcache
 
 ;--------------------
 ; Sending Emails

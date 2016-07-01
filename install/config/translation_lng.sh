@@ -5,7 +5,7 @@ echo "
 ===> Translation language of Q-Translate Client
 
 This is the code of the translation language
-of your client site (something like 'fr' or 'fr_FR').
+of your client site (something like 'en' or 'en_US').
 "
 if [ -z "${translation_lng+xxx}" -o "$translation_lng" = '' ]
 then

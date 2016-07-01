@@ -1,19 +1,8 @@
 
-Drupal installation profile for Q-Translate Client.
-
-* What is Q-Translate
-
-  The codename *Q-Translate* can be decoded like *Bee Translator*,
-  since it aims at collecting very small translation contributions
-  from a wide crowd of people and to dilute them into something
-  useful.
-
-  It can also be decoded like *Be Translator*, as an invitation to
-  anybody to give his small contribution for translating programs or
-  making their translations better.
-
-  For more detailed information see: http://info.qtranslate.org
-
+Drupal installation profile for Q-Translate Client. Q-Translate is an
+application that helps to improve the translations of the Quran, by
+getting review and feedback from lots of
+people. http://info.qtranslate.org
 
 * Installation
 
@@ -125,31 +114,3 @@ Drupal installation profile for Q-Translate Client.
   docker/exec.sh install/config/oauth2_login.sh
   #+END_EXAMPLE
   These scripts can be found on [[https://github.com/Q-Translate/qtr_client/tree/master/install/config][install/config/]].
-
-
-* Contacts
-
-  - Email: info@qtranslate.org
-
-  - Follow on Twitter: https://twitter.com/b_translator
-
-  - Discussion group/forum
-    + Email: /qtranslate@googlegroups.com/
-    + Web: https://groups.google.com/forum/?fromgroups&hl=en#!forum/qtranslate
-    + Google+ Community: https://plus.google.com/u/0/communities/109327047119841706609
-
-  - Chat/IRC: *#qtranslate* on *irc.freenode.net*
-
-  - Misc
-    + Homepage: http://info.qtranslate.org
-    + Wiki: https://github.com/Q-Translate/qtr_client/wiki
-    + Issues: https://github.com/Q-Translate/qtr_client/issues
-
-
-* Sites
-
-  Sites using Q-Translate:
-  - https://l10n.org.al - Albanian translations.
-
-  To install and setup your site you would need some basic skills on
-  Ubuntu server administration and Drupal administration.

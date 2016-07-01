@@ -4,26 +4,6 @@
 
 Development Tools, Tips and Tricks
 
-* How to access the shell
-
-  When things are still in development and testing we need to access
-  the shell of the installed system in order to check log files,
-  debug, play with changing configurations, etc.
-
-  For this we can install the command =docker-enter=:
-  #+BEGIN_EXAMPLE
-  docker run -v /usr/local/bin:/target jpetazzo/nsenter
-  #+END_EXAMPLE
-
-  Then access the shell of a running container like this:
-  #+BEGIN_EXAMPLE
-  docker-enter qcl
-  #+END_EXAMPLE
-
-  See also this article:
-  http://blog.docker.com/2014/06/why-you-dont-need-to-run-sshd-in-docker/
-
-
 * Install sshd
 
   We want to start a sshd server on port 2201 inside the container,
@@ -47,21 +27,6 @@ Development Tools, Tips and Tricks
   docker-enter qcl
   cd /usr/local/src/qtr_client/
   dev/install-sshd.sh 2201
-  #+END_EXAMPLE
-
-
-* Change the webserver
-
-  There are two webservers installed, apache2 and nginx (with php5-fpm
-  and memcached). For development Apache2 can be more suitable, while
-  for production NGINX is supposed to be more responsive in high load.
-
-  We can choose one of them like this:
-  #+BEGIN_EXAMPLE
-  docker-enter qcl
-  cd /usr/local/src/qtr_client/
-  dev/webserver.sh apache2
-  dev/webserver.sh nginx
   #+END_EXAMPLE
 
 
@@ -351,4 +316,4 @@ Development Tools, Tips and Tricks
   For remote access to work correctly, the public/private key ssh
   access should be set up and configured as well. For more detailed
   instructions on how to do it see:
-  http://dashohoxha.blogspot.com/2012/08/how-to-secure-ubuntu-server.html
+  http://dashohoxha.fs.al/how-to-secure-ubuntu-server/

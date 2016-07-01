@@ -9,9 +9,8 @@ for the qtr_client.
 It will modify the files:
  1) /etc/hostname
  2) /etc/hosts
- 3) /etc/nginx/sites-available/qcl*
- 4) /etc/apache2/sites-available/qcl*
- 5) /var/www/qcl*/sites/default/settings.php
+ 3) /etc/apache2/sites-available/qcl*
+ 4) /var/www/qcl*/sites/default/settings.php
 "
 
 ### get the old domain
@@ -33,10 +32,6 @@ sed -i /etc/hosts.conf \
 /etc/hosts_update.sh
 
 ### update config files
-for file in $(ls /etc/nginx/sites-available/qcl*)
-do
-    sed -i $file -e "/server_name/ s/$old_qcl_domain/$qcl_domain/"
-done
 for file in $(ls /etc/apache2/sites-available/qcl*)
 do
     sed -i $file \

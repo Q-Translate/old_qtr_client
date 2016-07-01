@@ -1,18 +1,5 @@
 #!/bin/bash -x
 
-### prevent robots from crawling translations
-sed -i $drupal_dir/robots.txt \
-    -e '/# Q-Translate/,$ d'
-cat <<EOF >> $drupal_dir/robots.txt
-# Q-Translate
-Disallow: /qtr/
-Disallow: /?q=qtr/
-Disallow: /translations/
-Disallow: /?q=translations/
-Disallow: /vocabulary/
-Disallow: /?q=vocabulary/
-EOF
-
 # Protect Drupal settings from prying eyes
 drupal_settings=$drupal_dir/sites/default/settings.php
 chown root:www-data $drupal_settings
@@ -42,40 +29,13 @@ EOF
 
 # set base_url
 cat >> $drupal_settings << EOF
-\$base_url = "https://example.org";
+\$base_url = "https://$qcl_domain";
 
 EOF
 
-# set the memcache configuration
-cat >> $drupal_settings << EOF
-// Adds memcache as a cache backend
-/* comment memcache config
-\$conf['cache_backends'][] = 'profiles/qtr_client/modules/contrib/memcache/memcache.inc';
-// Makes it so that memcache is the default caching backend
-\$conf['cache_default_class'] = 'MemCacheDrupal';
-// Keep forms in persistent storage, as per discussed at the beginning
-\$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-// I don't see any point in keeping the module update information in Memcached
-\$conf['cache_class_cache_update'] = 'DrupalDatabaseCache';
-
-// Specify the memcache servers you wish to use and assign them to a cluster
-// Cluster = group of memcache servers, in our case, it's probably just one server per cluster.
-\$conf['memcache_servers'] = array('unix:///var/run/memcached/memcached.sock' => 'default');
-// This assigns all cache bins to the 'default' cluster from above
-\$conf['memcache_bins'] = array('cache' => 'default');
-
-// If you wanted multiple Drupal installations to share one Memcache instance use the prefix like so:
-\$conf['memcache_key_prefix'] = 'qtr_client';
-comment memcache config */
-
-EOF
-
-### install qtrProject and qtrVocabulary
-### $drush is an alias for 'drush --root=/var/www/qcl'
-$drush --yes pm-enable qtrProject
-$drush --yes pm-enable qtrVocabulary
 
 ### install additional features
+### $drush is an alias for 'drush --root=/var/www/qcl'
 $drush --yes pm-enable qcl_qtrClient
 $drush --yes features-revert qcl_qtrClient
 

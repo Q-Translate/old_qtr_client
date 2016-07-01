@@ -3,7 +3,7 @@
 qcl_git_branch='master'
 
 ### Domain of the website.
-qcl_domain='fr.example.org'
+qcl_domain='en.qtranslate.net'
 
 ### Drupal 'admin' password.
 qcl_admin_passwd='admin'
@@ -15,7 +15,7 @@ gmail_account='MyEmailAddress@gmail.com'
 gmail_passwd=
 
 ### Translation language of Q-Translate Client.
-translation_lng='fr'
+translation_lng='en'
 
 ### Mysql passwords. Leave it as 'random'
 ### to generate a new one randomly
@@ -33,5 +33,5 @@ development='true'
 ### Login through ssh.
 ### Only login through private keys is allowed.
 ### See also this:
-###   http://dashohoxha.blogspot.com/2012/08/how-to-secure-ubuntu-server.html
+###   http://dashohoxha.fs.al/how-to-secure-ubuntu-server/
 sshd_port=2201

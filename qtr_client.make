@@ -27,7 +27,6 @@ libraries[lessphp][download][url] = https://github.com/oyejorge/less.php/archive
 ; Custom
 ;--------------------
 
-;projects[qtrclient] = 2.x-dev
 projects[qtrclient][type] = module
 projects[qtrclient][download][type] = git
 projects[qtrclient][download][url] = https://github.com/Q-Translate/qtrclient.git
@@ -84,7 +83,6 @@ projects[advuser] = 3.x-dev
 
 ;;; Performance
 projects[boost] = 1.1
-projects[memcache] = 1.5
 
 ;;; Services and Social
 projects[google_analytics] = 2.2
