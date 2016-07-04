@@ -93,46 +93,6 @@ function qcl_layout_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 0,
   );
-  // Exported menu link: main-menu_projects:qtr/project
-  $menu_links['main-menu_projects:qtr/project'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'qtr/project',
-    'router_path' => 'qtr/project',
-    'link_title' => 'Projects',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'List of projects',
-      ),
-      'identifier' => 'main-menu_projects:qtr/project',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'customized' => 1,
-  );
-  // Exported menu link: main-menu_vocabularies:vocabularies
-  $menu_links['main-menu_vocabularies:vocabularies'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'vocabularies',
-    'router_path' => 'vocabularies',
-    'link_title' => 'Vocabularies',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_vocabularies:vocabularies',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'customized' => 1,
-  );
 
   // Translatables
   // Included for use with string extractors like potx.
@@ -140,8 +100,6 @@ function qcl_layout_menu_default_menu_links() {
   t('API Reference');
   t('Contact');
   t('Home');
-  t('Projects');
-  t('Vocabularies');
 
   return $menu_links;
 }
