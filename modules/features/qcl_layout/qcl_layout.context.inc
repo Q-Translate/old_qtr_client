@@ -132,27 +132,15 @@ function qcl_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'qtrProject-list' => array(
-          'module' => 'qtrProject',
-          'delta' => 'list',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
-        'qtrVocabulary-list' => array(
-          'module' => 'qtrVocabulary',
-          'delta' => 'list',
-          'region' => 'sidebar_first',
-          'weight' => '-9',
-        ),
-        'qtrTranslations-statistics' => array(
+        'qtrTranslations-stats' => array(
           'module' => 'qtrTranslations',
-          'delta' => 'statistics',
+          'delta' => 'stats',
           'region' => 'sidebar_first',
           'weight' => '-8',
         ),
-        'qtrTranslations-topcontrib' => array(
+        'qtrTranslations-topusers' => array(
           'module' => 'qtrTranslations',
-          'delta' => 'topcontrib',
+          'delta' => 'topusers',
           'region' => 'sidebar_first',
           'weight' => '-7',
         ),
