@@ -132,14 +132,14 @@ function qcl_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'qtrTranslations-stats' => array(
-          'module' => 'qtrTranslations',
+        'qtrClient-stats' => array(
+          'module' => 'qtrClient',
           'delta' => 'stats',
           'region' => 'sidebar_first',
           'weight' => '-8',
         ),
-        'qtrTranslations-topusers' => array(
-          'module' => 'qtrTranslations',
+        'qtrClient-topusers' => array(
+          'module' => 'qtrClient',
           'delta' => 'topusers',
           'region' => 'sidebar_first',
           'weight' => '-7',

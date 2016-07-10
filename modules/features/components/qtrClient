@@ -1,6 +1,6 @@
-variable:qtrTranslations_topusers_period
-variable:qtrTranslations_topusers_size
+variable:qtrClient_topusers_period
+variable:qtrClient_topusers_size
 variable:qtrClient_translation_lng
-fe_block_settings:qtrTranslations-latest
-fe_block_settings:qtrTranslations-stats
-fe_block_settings:qtrTranslations-topusers
+fe_block_settings:qtrClient-latest
+fe_block_settings:qtrClient-stats
+fe_block_settings:qtrClient-topusers

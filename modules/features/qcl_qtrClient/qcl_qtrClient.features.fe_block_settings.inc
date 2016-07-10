@@ -12,11 +12,11 @@ function qcl_qtrClient_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['qtrTranslations-latest'] = array(
+  $export['qtrClient-latest'] = array(
     'cache' => -2,
     'custom' => 0,
     'delta' => 'latest',
-    'module' => 'qtrTranslations',
+    'module' => 'qtrClient',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -38,11 +38,11 @@ function qcl_qtrClient_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['qtrTranslations-statistics'] = array(
+  $export['qtrClient-statistics'] = array(
     'cache' => -2,
     'custom' => 0,
     'delta' => 'statistics',
-    'module' => 'qtrTranslations',
+    'module' => 'qtrClient',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -64,11 +64,11 @@ function qcl_qtrClient_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['qtrTranslations-topcontrib'] = array(
+  $export['qtrClient-topcontrib'] = array(
     'cache' => -2,
     'custom' => 0,
     'delta' => 'topcontrib',
-    'module' => 'qtrTranslations',
+    'module' => 'qtrClient',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),

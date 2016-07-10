@@ -12,7 +12,6 @@ dependencies[] = menu
 dependencies[] = menu_target
 dependencies[] = qcl_content
 dependencies[] = qcl_misc
-dependencies[] = qtrTranslations
 dependencies[] = strongarm
 dependencies[] = system
 dependencies[] = taxonomy

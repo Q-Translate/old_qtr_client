@@ -20,16 +20,16 @@ function qcl_qtrClient_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'qtrTranslations_topcontrib_period';
+  $strongarm->name = 'qtrClient_topcontrib_period';
   $strongarm->value = 'week';
-  $export['qtrTranslations_topcontrib_period'] = $strongarm;
+  $export['qtrClient_topcontrib_period'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'qtrTranslations_topcontrib_size';
+  $strongarm->name = 'qtrClient_topcontrib_size';
   $strongarm->value = '5';
-  $export['qtrTranslations_topcontrib_size'] = $strongarm;
+  $export['qtrClient_topcontrib_size'] = $strongarm;
 
   return $export;
 }
