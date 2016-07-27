@@ -19,7 +19,7 @@ function qcl_layout_default_box() {
   $box->description = 'Displays the title and slogan at the top of the front page.';
   $box->options = array(
     'body' => array(
-      'value' => '<h1>Translating Computer Programs</h1>',
+      'value' => '<h1>Quran Translations</h1>',
       'format' => 'full_html',
     ),
     'additional_classes' => '',
