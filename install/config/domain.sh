@@ -27,8 +27,8 @@ fi
 ### update /etc/hostname and /etc/hosts
 echo $qcl_domain > /etc/hostname
 sed -i /etc/hosts.conf \
-    -e "/127.0.0.1 $old_qcl_domain/c 127.0.0.1 $qcl_domain/" \
-    -e "/127.0.0.1 dev.$old_qcl_domain/c 127.0.0.1 dev.$qcl_domain/"
+    -e "/127.0.0.1 $old_qcl_domain/c 127.0.0.1 $qcl_domain" \
+    -e "/127.0.0.1 dev.$old_qcl_domain/c 127.0.0.1 dev.$qcl_domain"
 /etc/hosts_update.sh
 
 ### update config files
