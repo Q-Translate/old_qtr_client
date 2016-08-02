@@ -38,7 +38,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-07-17 17:59+0000\n"
+"POT-Creation-Date: 2016-08-02 13:45+0000\n"
 "PO-Revision-Date: 2014-10-28 07:11+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -64,44 +64,310 @@ msgstr ""
 msgid "Send e-mail to admin when user modifies his account"
 msgstr ""
 
-#: themes/bootstrap1/bootstrap1.info:0
-msgid "Bootstrap Subtheme"
+#: modules/features/qcl_captcha/qcl_captcha.admin.inc:33
+msgid "Site key"
 msgstr ""
 
-#: themes/bootstrap1/bootstrap1.info:0
-msgid "Customized Bootstrap Theme."
+#: modules/features/qcl_captcha/qcl_captcha.admin.inc:36
+msgid ""
+"The site key given to you when you <a href=\"@url\">register for reCAPTCHA</"
+"a>."
 msgstr ""
 
-#: themes/bootstrap1/bootstrap1.info:0
+#: modules/features/qcl_captcha/qcl_captcha.admin.inc:43
+msgid "Secret key"
+msgstr ""
+
+#: modules/features/qcl_captcha/qcl_captcha.admin.inc:46
+msgid ""
+"The secret key given to you when you <a href=\"@url\">register for "
+"reCAPTCHA</a>."
+msgstr ""
+
+#: modules/features/qcl_captcha/qcl_captcha.info:0
+msgid "qcl_captcha"
+msgstr ""
+
+#: modules/features/qcl_captcha/qcl_captcha.info:0
+#: modules/features/qcl_content/qcl_content.info:0
+#: modules/features/qcl_drupalchat/qcl_drupalchat.info:0
+#: modules/features/qcl_googleanalytics/qcl_googleanalytics.info:0
+#: modules/features/qcl_invite/qcl_invite.info:0
+#: modules/features/qcl_layout/qcl_layout.info:0
+#: modules/features/qcl_mass_contact/qcl_mass_contact.info:0
+#: modules/features/qcl_misc/qcl_misc.info:0
+#: modules/features/qcl_permissions/qcl_permissions.info:0
+#: modules/features/qcl_qtrClient/qcl_qtrClient.info:0
+#: modules/features/qcl_simplenews/qcl_simplenews.info:0
+msgid "Features"
+msgstr ""
+
+#: modules/features/qcl_content/qcl_content.features.inc:22
+msgid "Basic page"
+msgstr ""
+
+#: modules/features/qcl_content/qcl_content.features.inc:24
+msgid ""
+"Use <em>basic pages</em> for your static content, such as an 'About us' page."
+msgstr ""
+
+#: modules/features/qcl_content/qcl_content.features.inc:26
+#: modules/features/qcl_layout/qcl_layout.features.inc:39;47
+msgid "Title"
+msgstr ""
+
+#: modules/features/qcl_content/qcl_content.info:0
+msgid "qcl_content"
+msgstr ""
+
+#: modules/features/qcl_drupalchat/qcl_drupalchat.info:0
+msgid "qcl_drupalchat"
+msgstr ""
+
+#: modules/features/qcl_googleanalytics/qcl_googleanalytics.admin.inc:34
+msgid "Web Property ID"
+msgstr ""
+
+#: modules/features/qcl_googleanalytics/qcl_googleanalytics.admin.inc:40
+msgid ""
+"This ID is unique to each site you want to track separately, and is in the "
+"form of UA-xxxxxxx-yy. To get a Web Property ID, <a href=\"@analytics"
+"\">register your site with Google Analytics</a>, or if you already have "
+"registered your site, go to your Google Analytics Settings page to see the "
+"ID next to every site profile. <a href=\"@webpropertyid\">Find more "
+"information in the documentation</a>."
+msgstr ""
+
+#: modules/features/qcl_googleanalytics/qcl_googleanalytics.info:0
+msgid "qcl_googleanalytics"
+msgstr ""
+
+#: modules/features/qcl_invite/qcl_invite.info:0
+msgid "qcl_invite"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.context.inc:42
+msgid "Display development block to admin."
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.context.inc:104
+msgid "Pages, blogs, books, etc."
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.context.inc:172
+msgid "Layout of the front page."
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.context.inc:229
+msgid "Layout of a page."
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.context.inc:307
+msgid ""
+"The pages where the translation/feedback activity is happening (module "
+"qtrClient)."
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.field_instance.inc:284
+msgid "Body"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.field_instance.inc:285
+msgid "Enter a comma-separated list of words to describe your content."
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.field_instance.inc:286
+msgid "Image"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.field_instance.inc:287
+msgid "Tags"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.field_instance.inc:288
+msgid "Upload an image to go with this article."
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.inc:35
+msgid "Article"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.inc:37
+msgid ""
+"Use <em>articles</em> for time-sensitive content like news, press releases "
+"or blog posts."
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.inc:43
+msgid "Book page"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.inc:45
+msgid ""
+"<em>Books</em> have a built-in hierarchical navigation. Use for handbooks or "
+"tutorials."
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.menu_custom.inc:21
+msgid "Main menu"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.menu_custom.inc:22
+msgid ""
+"The <em>Main</em> menu is used on many sites to show the major sections of "
+"the site, often in a top navigation bar."
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.menu_links.inc:119
+msgid "API Examples"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.menu_links.inc:120
+msgid "API Reference"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.menu_links.inc:121
+msgid "Contact"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.menu_links.inc:122
+msgid "Home"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.features.menu_links.inc:123
+msgid "Translations"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:84
+msgid "Master"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:85
+msgid "more"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:86
+msgid "Apply"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:87
+msgid "Reset"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:88
+msgid "Sort by"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:89
+msgid "Asc"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:90
+msgid "Desc"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:91
+msgid "Items per page"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:92
+msgid "- All -"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:93
+msgid "Offset"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:94
+msgid "« first"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:95
+msgid "‹ previous"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:96
+msgid "next ›"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:97
+msgid "last »"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.views_default.inc:98
+msgid "Page"
+msgstr ""
+
+#: modules/features/qcl_layout/qcl_layout.info:0
+msgid "qcl_layout"
+msgstr ""
+
+#: modules/features/qcl_mass_contact/qcl_mass_contact.info:0
+msgid "qcl_mass_contact"
+msgstr ""
+
+#: modules/features/qcl_misc/qcl_misc.info:0
+msgid "qcl_misc"
+msgstr ""
+
+#: modules/features/qcl_permissions/qcl_permissions.info:0
+msgid "qcl_permissions"
+msgstr ""
+
+#: modules/features/qcl_qtrClient/qcl_qtrClient.info:0
+msgid "qcl_qtrClient"
+msgstr ""
+
+#: modules/features/qcl_simplenews/qcl_simplenews.info:0
+msgid "qcl_simplenews"
+msgstr ""
+
+#: themes/qtr_client/qtr_client.info:0
+msgid "qtr_client"
+msgstr ""
+
+#: themes/qtr_client/qtr_client.info:0
+msgid "A Bootstrap Sub-theme for Q-Translate Client."
+msgstr ""
+
+#: themes/qtr_client/qtr_client.info:0
 msgid "Navigation"
 msgstr ""
 
-#: themes/bootstrap1/bootstrap1.info:0
+#: themes/qtr_client/qtr_client.info:0
 msgid "Top Bar"
 msgstr ""
 
-#: themes/bootstrap1/bootstrap1.info:0
+#: themes/qtr_client/qtr_client.info:0
 msgid "Highlighted"
 msgstr ""
 
-#: themes/bootstrap1/bootstrap1.info:0
+#: themes/qtr_client/qtr_client.info:0
 msgid "Help"
 msgstr ""
 
-#: themes/bootstrap1/bootstrap1.info:0
+#: themes/qtr_client/qtr_client.info:0
 msgid "Content"
 msgstr ""
 
-#: themes/bootstrap1/bootstrap1.info:0
+#: themes/qtr_client/qtr_client.info:0
 msgid "Primary"
 msgstr ""
 
-#: themes/bootstrap1/bootstrap1.info:0
+#: themes/qtr_client/qtr_client.info:0
 msgid "Secondary"
 msgstr ""
 
-#: themes/bootstrap1/bootstrap1.info:0
+#: themes/qtr_client/qtr_client.info:0
 msgid "Footer"
+msgstr ""
+
+#: themes/qtr_client/qtr_client.info:0
+msgid "Page top"
+msgstr ""
+
+#: themes/qtr_client/qtr_client.info:0
+msgid "Page bottom"
 msgstr ""
 
 #: qtr_client.profile:30
