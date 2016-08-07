@@ -30,7 +30,7 @@ function qcl_content_node_export_features_default() {
       \'data\' => NULL,
       \'disqus\' => array(
         \'domain\' => \'qtranslate\',
-        \'url\' => \'https://qtranslate.net/what-is-qtranslate\',
+        \'url\' => \'https://qtranslate.net/what-q-translate\',
         \'title\' => \'What is Q-Translate\',
         \'identifier\' => \'node/1\',
         \'developer\' => 1,
@@ -274,7 +274,7 @@ function qcl_content_node_export_features_default() {
       \'data\' => NULL,
       \'disqus\' => array(
         \'domain\' => \'qtranslate\',
-        \'url\' => \'https://qtranslate.net/embed-qtranslate-inside-webpage\',
+        \'url\' => \'https://qtranslate.net/embed-q-translate-inside-webpage\',
         \'title\' => \'Embed Q-Translate Inside a Webpage\',
         \'identifier\' => \'node/3\',
         \'developer\' => 1,
@@ -396,7 +396,7 @@ function qcl_content_node_export_features_default() {
       \'data\' => NULL,
       \'disqus\' => array(
         \'domain\' => \'qtranslate\',
-        \'url\' => \'https://qtranslate.net/privacy-policy\',
+        \'url\' => \'https://qtranslate.net/privacy\',
         \'title\' => \'Privacy Policy\',
         \'identifier\' => \'node/4\',
         \'developer\' => 1,
@@ -608,6 +608,112 @@ function qcl_content_node_export_features_default() {
       \'body\' => array(
         \'und\' => array(
           array(
+            \'value\' => "<p>Search types are: <strong>Similar</strong> and <strong>Logical</strong>.</p>\\r\\n<ul>\\r\\n<li><strong>Similar searches</strong> return results according to the similarity with the search string.</li>\\r\\n<li><strong>Logical searches</strong> can use more advanced logic to select the right results. For example the sign <strong>+</strong> (or <strong>-</strong>) in front of a word indicates that the word must be present (absent) in the result. A phrase that is enclosed in double quotes (<strong>\\"</strong>) is matched literally. A star (<strong>*</strong>) appended to a word acts as a wildcard (matches all the words starting with that word). For more details see this: <a href=\\"http://dev.mysql.com/doc/refman/5.7/en/fulltext-boolean.html\\" target=\\"_blank\\">MySQL Boolean Full-Text Searches</a>.</li>\\r\\n</ul>\\r\\n",
+            \'summary\' => \'\',
+            \'format\' => \'filtered_html\',
+            \'safe_value\' => "<p>Search types are: <strong>Similar</strong> and <strong>Logical</strong>.</p>\\n<ul>\\n<li><strong>Similar searches</strong> return results according to the similarity with the search string.</li>\\n<li><strong>Logical searches</strong> can use more advanced logic to select the right results. For example the sign <strong>+</strong> (or <strong>-</strong>) in front of a word indicates that the word must be present (absent) in the result. A phrase that is enclosed in double quotes (<strong>\\"</strong>) is matched literally. A star (<strong>*</strong>) appended to a word acts as a wildcard (matches all the words starting with that word). For more details see this: <a href=\\"http://dev.mysql.com/doc/refman/5.7/en/fulltext-boolean.html\\" target=\\"_blank\\">MySQL Boolean Full-Text Searches</a>.</li>\\n</ul>\\n",
+            \'safe_summary\' => \'\',
+          ),
+        ),
+      ),
+      \'changed\' => NULL,
+      \'cid\' => \'0\',
+      \'comment\' => \'2\',
+      \'comment_count\' => \'0\',
+      \'created\' => NULL,
+      \'data\' => \'a:2:{s:7:"contact";i:1;s:17:"mimemail_textonly";i:0;}\',
+      \'disqus\' => array(
+        \'domain\' => \'qtranslate\',
+        \'url\' => \'https://qtranslate.net/search-types\',
+        \'title\' => \'Search Types\',
+        \'identifier\' => \'node/8\',
+        \'developer\' => 1,
+        \'status\' => FALSE,
+      ),
+      \'files\' => array(),
+      \'language\' => \'en\',
+      \'last_comment_name\' => NULL,
+      \'last_comment_timestamp\' => NULL,
+      \'last_comment_uid\' => \'1\',
+      \'log\' => \'\',
+      \'menu\' => NULL,
+      \'name\' => \'Anonymous\',
+      \'nid\' => NULL,
+      \'node_export_drupal_version\' => \'7\',
+      \'path\' => NULL,
+      \'picture\' => \'0\',
+      \'promote\' => \'0\',
+      \'rdf_mapping\' => array(
+        \'rdftype\' => array(
+          \'foaf:Document\',
+        ),
+        \'title\' => array(
+          \'predicates\' => array(
+            \'dc:title\',
+          ),
+        ),
+        \'created\' => array(
+          \'predicates\' => array(
+            \'dc:date\',
+            \'dc:created\',
+          ),
+          \'datatype\' => \'xsd:dateTime\',
+          \'callback\' => \'date_iso8601\',
+        ),
+        \'changed\' => array(
+          \'predicates\' => array(
+            \'dc:modified\',
+          ),
+          \'datatype\' => \'xsd:dateTime\',
+          \'callback\' => \'date_iso8601\',
+        ),
+        \'body\' => array(
+          \'predicates\' => array(
+            \'content:encoded\',
+          ),
+        ),
+        \'uid\' => array(
+          \'predicates\' => array(
+            \'sioc:has_creator\',
+          ),
+          \'type\' => \'rel\',
+        ),
+        \'name\' => array(
+          \'predicates\' => array(
+            \'foaf:name\',
+          ),
+        ),
+        \'comment_count\' => array(
+          \'predicates\' => array(
+            \'sioc:num_replies\',
+          ),
+          \'datatype\' => \'xsd:integer\',
+        ),
+        \'last_activity\' => array(
+          \'predicates\' => array(
+            \'sioc:last_activity_date\',
+          ),
+          \'datatype\' => \'xsd:dateTime\',
+          \'callback\' => \'date_iso8601\',
+        ),
+      ),
+      \'revision_timestamp\' => NULL,
+      \'revision_uid\' => 1,
+      \'status\' => \'1\',
+      \'sticky\' => \'0\',
+      \'title\' => \'Search Types\',
+      \'tnid\' => \'0\',
+      \'translate\' => \'0\',
+      \'type\' => \'page\',
+      \'uid\' => \'0\',
+      \'uuid\' => \'789a08c6-f845-42b1-b5f6-f1c38e9a7310\',
+      \'vid\' => NULL,
+      \'vuuid\' => \'b7c6eac5-9eeb-4200-8a34-41b67b0e964c\',
+    ),
+  (object) array(
+      \'body\' => array(
+        \'und\' => array(
+          array(
             \'value\' => \'<p>The services of this application will be used in good faith. Any disputes will be solved with agreement and mutual understanding.</p>\',
             \'summary\' => \'\',
             \'format\' => \'filtered_html\',
@@ -624,7 +730,7 @@ function qcl_content_node_export_features_default() {
       \'data\' => NULL,
       \'disqus\' => array(
         \'domain\' => \'qtranslate\',
-        \'url\' => \'https://qtranslate.net/terms-service\',
+        \'url\' => \'https://qtranslate.net/terms\',
         \'title\' => \'Terms of Service\',
         \'identifier\' => \'node/6\',
         \'developer\' => 1,
