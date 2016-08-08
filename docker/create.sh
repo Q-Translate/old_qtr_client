@@ -31,12 +31,22 @@ function remove_dir() {
     fi
 }
 
+docker_create() {
+    docker create --name=$container --hostname=$hostname \
+        --security-opt seccomp=unconfined \
+        --stop-signal=SIGRTMIN+3 \
+        --tmpfs /run \
+        --tmpfs /run/lock \
+        -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+        "$@" $ports $image
+}
+
 if [ "$dev" = 'false' ]
 then
     ### create a container for production
-    docker create --name=$container --hostname=$hostname --restart=always \
-        -v $(pwd)/downloads:/var/www/downloads \
-        $ports $image
+    docker_create \
+        --restart=always \
+        -v $(pwd)/downloads:/var/www/downloads
 else
     ### remove the directory qtr_client/ if it exists
     remove_dir qtr_client
@@ -49,8 +59,7 @@ else
     docker rm $container
 
     ### create a container for development
-    docker create --name=$container --hostname=$hostname --restart=always \
+    docker_create \
         -v $(pwd)/qtr_client:/var/www/qcl/profiles/qtr_client \
-        --link $qtr_container:$qtr_domain \
-        $ports $image
+        --link $qtr_container:$qtr_domain
 fi

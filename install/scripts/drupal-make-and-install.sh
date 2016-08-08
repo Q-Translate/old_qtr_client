@@ -49,13 +49,6 @@ fi
 mkdir -p /var/www/downloads/
 chown www-data /var/www/downloads/
 
-### start mysqld manually, if it is not running
-if test -z "$(ps ax | grep [m]ysqld)"
-then
-    nohup mysqld --user mysql >/dev/null 2>/dev/null &
-    sleep 5  # give time mysqld to start
-fi
-
 ### settings for the database and the drupal site
 db_name=qcl
 db_user=qcl
@@ -75,7 +68,7 @@ $mysql -e "
 "
 
 ### start site installation
-sed -e '/memory_limit/ c memory_limit = -1' -i /etc/php5/cli/php.ini
+#sed -e '/memory_limit/ c memory_limit = -1' -i /etc/php/7.0/cli/php.ini
 cd $drupal_dir
 drush site-install --verbose --yes qtr_client \
       --db-url="mysql://$db_user:$db_pass@localhost/$db_name" \

@@ -4,32 +4,6 @@
 
 Development Tools, Tips and Tricks
 
-* Install sshd
-
-  We want to start a sshd server on port 2201 inside the container,
-  but when we created the container with =docker run= we did not think
-  about forwarding this port. We have to destroy this container and
-  create a new one, with an addition =-p= option for the
-  port 2201. But first we should use the command =docker commit= to
-  save to a new image any configurations and data that we already have
-  in this container.
-  #+BEGIN_EXAMPLE
-  docker stop qcl
-  docker commit qcl qtr_client:1
-  docker images
-  docker rm qcl
-  docker run -d --name=qcl --hostname=example.org \
-	     -p 80:80 -p 443:443 -p 2201:2201 qtr_client:1
-  #+END_EXAMPLE
-
-  Now we can enter the container and start the sshd server:
-  #+BEGIN_EXAMPLE
-  docker-enter qcl
-  cd /usr/local/src/qtr_client/
-  dev/install-sshd.sh 2201
-  #+END_EXAMPLE
-
-
 * Making clones of the application
 
   Clones of the main site can be used for development and testing. 
