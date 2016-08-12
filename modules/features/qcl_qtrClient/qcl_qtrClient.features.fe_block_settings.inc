@@ -38,10 +38,10 @@ function qcl_qtrClient_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['qtrClient-statistics'] = array(
+  $export['qtrClient-stats'] = array(
     'cache' => -2,
     'custom' => 0,
-    'delta' => 'statistics',
+    'delta' => 'stats',
     'module' => 'qtrClient',
     'node_types' => array(),
     'pages' => '',
@@ -64,10 +64,10 @@ function qcl_qtrClient_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['qtrClient-topcontrib'] = array(
+  $export['qtrClient-topusers'] = array(
     'cache' => -2,
     'custom' => 0,
-    'delta' => 'topcontrib',
+    'delta' => 'topusers',
     'module' => 'qtrClient',
     'node_types' => array(),
     'pages' => '',
