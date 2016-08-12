@@ -13,6 +13,123 @@ function qcl_misc_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_allow_list_uid1';
+  $strongarm->value = 0;
+  $export['advuser_allow_list_uid1'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_listno';
+  $strongarm->value = '50';
+  $export['advuser_listno'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_log_notifications';
+  $strongarm->value = 0;
+  $export['advuser_log_notifications'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_modify_mail';
+  $strongarm->value = '=====  Updated User Information:  =====
+    User: [user:name:raw]
+    Mail: [user:mail]
+ Created: [user:created]
+  Status: [user:status]
+Timezone: [user:timezone]
+Language: [user:language]
+   Theme: [user:theme]
+
+User account administration page at [account-url] for [site-name]';
+  $export['advuser_modify_mail'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_modify_notify';
+  $strongarm->value = 1;
+  $export['advuser_modify_notify'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_modify_subject';
+  $strongarm->value = '[[site:name]] User [user:name:raw] has modified their account.';
+  $export['advuser_modify_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_new_mail';
+  $strongarm->value = '=====  New User Information:  =====
+    User: [user:name:raw]
+    Mail: [user:mail]
+ Created: [user:created]
+  Status: [user:status]
+Timezone: [user:timezone]
+Language: [user:language]
+   Theme: [user:theme]
+Identity Provider: [user:hybridauth:provider]
+
+User account administration page at [user:edit-url] for [site:name]';
+  $export['advuser_new_mail'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_new_notify';
+  $strongarm->value = 1;
+  $export['advuser_new_notify'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_new_subject';
+  $strongarm->value = '[[site:name]] On [user:created] a new user registered as [user:name:raw].';
+  $export['advuser_new_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_nobody_from_address';
+  $strongarm->value = 0;
+  $export['advuser_nobody_from_address'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_notify_uid1';
+  $strongarm->value = 1;
+  $export['advuser_notify_uid1'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_reset_never_access';
+  $strongarm->value = 0;
+  $export['advuser_reset_never_access'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_senders_from_address';
+  $strongarm->value = 1;
+  $export['advuser_senders_from_address'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'advuser_set_never_access';
+  $strongarm->value = 0;
+  $export['advuser_set_never_access'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'aggregator_category_selector';
   $strongarm->value = 'checkboxes';
   $export['aggregator_category_selector'] = $strongarm;
@@ -597,7 +714,7 @@ function qcl_misc_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_count';
-  $strongarm->value = 5;
+  $strongarm->value = 9;
   $export['language_count'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -738,27 +855,26 @@ function qcl_misc_strongarm() {
     14 => 62,
     15 => 61,
     16 => 60,
-    17 => 49,
-    18 => 44,
-    19 => 31,
-    20 => 30,
-    21 => 29,
-    22 => 28,
-    23 => 27,
-    24 => 24,
-    25 => 23,
-    26 => 21,
-    27 => 15,
-    28 => 14,
-    29 => 13,
-    30 => 12,
-    31 => 11,
-    32 => 7,
-    33 => 6,
-    34 => 5,
-    35 => 3,
-    36 => 2,
-    37 => 1,
+    17 => 44,
+    18 => 31,
+    19 => 30,
+    20 => 29,
+    21 => 28,
+    22 => 27,
+    23 => 24,
+    24 => 23,
+    25 => 21,
+    26 => 15,
+    27 => 14,
+    28 => 13,
+    29 => 12,
+    30 => 11,
+    31 => 7,
+    32 => 6,
+    33 => 5,
+    34 => 3,
+    35 => 2,
+    36 => 1,
   );
   $export['menu_masks'] = $strongarm;
 
@@ -981,7 +1097,7 @@ function qcl_misc_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'update_check_disabled';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['update_check_disabled'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1059,7 +1175,7 @@ function qcl_misc_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_email_verification';
-  $strongarm->value = TRUE;
+  $strongarm->value = 1;
   $export['user_email_verification'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1129,7 +1245,7 @@ function qcl_misc_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_register';
-  $strongarm->value = 1;
+  $strongarm->value = '1';
   $export['user_register'] = $strongarm;
 
   $strongarm = new stdClass();
